@@ -134,6 +134,34 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
     .team-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+
+    /* Nested sub-report card */
+    .team-card-sub {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 4px solid #e5e7eb;
+      margin-top: 10px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .team-card-sub:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .team-card-sub.red    { border-left-color: #ef4444; }
+    .team-card-sub.yellow { border-left-color: #f59e0b; }
+    .team-card-sub.green  { border-left-color: #22c55e; }
+    .sub-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .sub-label::before { content: "↳"; font-size: 12px; }
+    .team-card-wrapper { display: flex; flex-direction: column; }
     .team-card.red    { border-top-color: #ef4444; }
     .team-card.yellow { border-top-color: #f59e0b; }
     .team-card.green  { border-top-color: #22c55e; }
@@ -335,10 +363,9 @@
       <p>Ads &amp; Business Messaging Pillar &nbsp;·&nbsp; ABM – Core Ads Growth</p>
       <div class="org-stats">
         <div class="org-stat"><div class="val">35</div><div class="lbl">Total Employees</div></div>
-        <div class="org-stat"><div class="val">3</div><div class="lbl">PDMs Tracked</div></div>
-        <div class="org-stat"><div class="val" style="color:#ef4444;">57%</div><div class="lbl">Highest PDM</div></div>
+        <div class="org-stat"><div class="val">4</div><div class="lbl">PDMs Tracked</div></div>
+        <div class="org-stat"><div class="val" style="color:#22c55e;">80%</div><div class="lbl">Highest PDM</div></div>
         <div class="org-stat"><div class="val" style="color:#ef4444;">36%</div><div class="lbl">Lowest PDM</div></div>
-      </div>
     </div>
   </div>
 
@@ -346,6 +373,7 @@
   <div class="section-label">Product Design Manager Breakdown</div>
   <div class="team-grid">
 
+    <!-- Bolun Yang – direct report of Chuanqi -->
     <div class="team-card red">
       <div class="card-header">
         <div>
@@ -359,52 +387,75 @@
       </div>
       <div class="card-footer">
         <span class="status-pill red">Needs Attention</span>
-        <span class="card-target">Target: 70%</span>
+        <span class="card-target">Target: 80%</span>
       </div>
     </div>
 
-    <div class="team-card red">
-      <div class="card-header">
-        <div>
-          <div class="card-name">Eleanor Pachaud</div>
-          <div class="card-count">12 recursive employees</div>
+    <!-- Eleanor Pachaud – direct report of Chuanqi, with Vivian nested below -->
+    <div class="team-card-wrapper">
+      <div class="team-card red">
+        <div class="card-header">
+          <div>
+            <div class="card-name">Eleanor Pachaud</div>
+            <div class="card-count">12 recursive employees</div>
+          </div>
+          <div class="card-pct red">42%</div>
         </div>
-        <div class="card-pct red">42%</div>
+        <div class="progress-track">
+          <div class="progress-fill red" style="width:42%"></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-pill red">Needs Attention</span>
+          <span class="card-target">Target: 80%</span>
+        </div>
       </div>
-      <div class="progress-track">
-        <div class="progress-fill red" style="width:42%"></div>
-      </div>
-      <div class="card-footer">
-        <span class="status-pill red">Needs Attention</span>
-        <span class="card-target">Target: 70%</span>
+
+      <!-- Vivian Wang – reports to Eleanor -->
+      <div class="team-card-sub yellow">
+        <div class="sub-label">Reports to Eleanor Pachaud</div>
+        <div class="card-header" style="margin-bottom:10px;">
+          <div>
+            <div class="card-name" style="font-size:14px;">Vivian Wang (Ads)</div>
+            <div class="card-count">7 recursive employees</div>
+          </div>
+          <div class="card-pct yellow" style="font-size:26px;">57%</div>
+        </div>
+        <div class="progress-track" style="height:7px;margin-bottom:8px;">
+          <div class="progress-fill yellow" style="width:57%"></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-pill yellow">Progressing</span>
+          <span class="card-target">Target: 80%</span>
+        </div>
       </div>
     </div>
 
-    <div class="team-card red">
+    <!-- Helen Zhou – direct report of Chuanqi -->
+    <div class="team-card green">
       <div class="card-header">
         <div>
-          <div class="card-name">Vivian Wang (Ads)</div>
-          <div class="card-count">7 recursive employees</div>
+          <div class="card-name">Helen Zhou</div>
+          <div class="card-count">5 recursive employees</div>
         </div>
-        <div class="card-pct red">57%</div>
+        <div class="card-pct green">80%</div>
       </div>
       <div class="progress-track">
-        <div class="progress-fill red" style="width:57%"></div>
+        <div class="progress-fill green" style="width:80%"></div>
       </div>
       <div class="card-footer">
-        <span class="status-pill red">Needs Attention</span>
-        <span class="card-target">Target: 70%</span>
+        <span class="status-pill green">On Track</span>
+        <span class="card-target">Target: 80%</span>
       </div>
     </div>
 
   </div>
 
   <!-- LEGEND -->
-  <div class="legend">
+    <div class="legend">
     <span class="legend-label">Legend:</span>
-    <div class="legend-item"><span class="legend-dot red"></span>Under 70% — Needs Attention</div>
-    <div class="legend-item"><span class="legend-dot yellow"></span>70–84% — Progressing</div>
-    <div class="legend-item"><span class="legend-dot green"></span>85–100% — On Track</div>
+    <div class="legend-item"><span class="legend-dot red"></span>59% &amp; under — Needs Attention</div>
+    <div class="legend-item"><span class="legend-dot yellow"></span>60–79% — Progressing</div>
+    <div class="legend-item"><span class="legend-dot green"></span>80–100% — On Track</div>
     <span class="legend-def">L4+/7 = Active on 4+ of the last 7 days across AI tools</span>
   </div>
 
@@ -414,7 +465,7 @@
     <div class="about-grid">
       <div class="about-item">
         <div class="about-title">What this shows</div>
-        <p>AI4P tool usage (L4+/7 metric) for <strong>Chuanqi Li</strong> and her direct and recursive reports who are Product Design Managers: <strong>Bolun Yang</strong>, <strong>Eleanor Pachaud</strong>, and <strong>Vivian Wang (Ads)</strong>. Data is sourced from <a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank">UniDash · AI4P by Pillar</a> with Manager Name = "Chuanqi Li".</p>
+        <p>AI4P tool usage (L4+/7 metric) for <strong>Chuanqi Li</strong> and her direct and recursive reports who are Product Design Managers: <strong>Bolun Yang</strong>, <strong>Eleanor Pachaud</strong>, <strong>Vivian Wang (Ads)</strong>, and <strong>Helen Zhou</strong>. Data is sourced from <a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank">UniDash · AI4P by Pillar</a> with Manager Name = "Chuanqi Li".</p>
       </div>
       <div class="about-item">
         <div class="about-title">How data is refreshed</div>
