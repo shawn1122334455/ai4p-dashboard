@@ -14,50 +14,51 @@
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
-    header {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
-      color: #fff;
-      padding: 32px 48px 28px;
+    /* ── DASHBOARD TITLE (in body, no banner) ── */
+    .dash-title-block {
+      margin-bottom: 28px;
     }
-    .header-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .header-badges {
+    .dash-badges {
       display: flex;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       flex-wrap: wrap;
     }
     .badge {
       display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.25);
+      background: #e5e7eb;
+      border: 1px solid #d1d5db;
       border-radius: 20px;
       padding: 4px 14px;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.8px;
       text-transform: uppercase;
+      color: #374151;
     }
-    .badge.live { background: rgba(34,197,94,0.25); border-color: rgba(34,197,94,0.5); color: #86efac; }
-    header h1 { font-size: 28px; font-weight: 700; line-height: 1.2; }
-    header .subtitle { margin-top: 6px; font-size: 14px; opacity: 0.7; }
-    .header-meta {
+    .badge.live { background: #dcfce7; border-color: #86efac; color: #166534; }
+    .dash-title-block h1 { font-size: 26px; font-weight: 800; color: #1a1a2e; line-height: 1.2; }
+    .dash-title-block .subtitle { margin-top: 5px; font-size: 14px; color: #6b7280; }
+
+    /* ── ORG CARD META (right side) ── */
+    .org-meta {
+      margin-left: auto;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 6px;
+      gap: 8px;
       text-align: right;
+      padding-left: 24px;
+      border-left: 1px solid #e5e7eb;
     }
-    .header-meta .meta-item { font-size: 12px; opacity: 0.75; }
-    .header-meta .meta-item strong { opacity: 1; color: #fff; }
-    .header-meta a { color: #93c5fd; text-decoration: none; }
-    .header-meta a:hover { text-decoration: underline; }
+    .org-meta .meta-row {
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.4;
+    }
+    .org-meta .meta-row strong { color: #1a1a2e; font-weight: 600; }
+    .org-meta a { color: #3b82f6; text-decoration: none; font-size: 12px; font-weight: 500; }
+    .org-meta a:hover { text-decoration: underline; }
 
     /* ── MAIN CONTENT ── */
     main { max-width: 960px; margin: 0 auto; padding: 40px 24px 60px; }
@@ -313,36 +314,28 @@
     }
 
     @media (max-width: 600px) {
-      header { padding: 24px 20px; }
-      .header-top { flex-direction: column; }
-      .header-meta { align-items: flex-start; text-align: left; }
       main { padding: 24px 16px 48px; }
       .org-card { flex-direction: column; align-items: flex-start; }
+      .org-meta { margin-left: 0; border-left: none; border-top: 1px solid #e5e7eb; padding-left: 0; padding-top: 16px; align-items: flex-start; text-align: left; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="header-top">
-    <div>
-      <div class="header-badges">
-        <span class="badge">AI4P</span>
-        <span class="badge">Product Design</span>
-        <span class="badge live">● Live Data</span>
-      </div>
-      <h1>AI4P Tool Usage Dashboard</h1>
-      <p class="subtitle">Manager &amp; Recursive Reports — Chuanqi Li's Org</p>
-    </div>
-    <div class="header-meta">
-      <div class="meta-item"><strong>Last Updated:</strong> Feb 25, 2026 at 4:44 PM PT</div>
-      <div class="meta-item"><strong>UniDash data as of:</strong> Feb 22, 2026</div>
-      <div class="meta-item"><a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank">View source in UniDash ↗</a></div>
-    </div>
-  </div>
-</header>
+
 
 <main>
+
+  <!-- DASHBOARD TITLE -->
+  <div class="dash-title-block">
+    <div class="dash-badges">
+      <span class="badge">AI4P</span>
+      <span class="badge">Product Design</span>
+      <span class="badge live">● Live Data</span>
+    </div>
+    <h1>AI4P Tool Usage Dashboard</h1>
+    <p class="subtitle">Manager &amp; Recursive Reports — Chuanqi Li's Org</p>
+  </div>
 
   <!-- ORG OVERVIEW -->
   <div class="section-label">Org Overview</div>
@@ -366,6 +359,13 @@
         <div class="org-stat"><div class="val">4</div><div class="lbl">PDMs Tracked</div></div>
         <div class="org-stat"><div class="val" style="color:#22c55e;">80%</div><div class="lbl">Highest PDM</div></div>
         <div class="org-stat"><div class="val" style="color:#ef4444;">36%</div><div class="lbl">Lowest PDM</div></div>
+    </div>
+    </div>
+    <!-- Org card right-side meta -->
+    <div class="org-meta">
+      <div class="meta-row"><strong>Last Updated</strong><br/>Feb 25, 2026 at 4:44 PM PT</div>
+      <div class="meta-row"><strong>UniDash data as of</strong><br/>Feb 22, 2026</div>
+      <a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank">View source in UniDash ↗</a>
     </div>
   </div>
 
