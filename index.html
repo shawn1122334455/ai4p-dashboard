@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI4P Tool Usage Dashboard – Chuanqi Li's Org</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1c1e21;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0866ff 0%, #0052cc 100%);
+      color: #fff;
+      padding: 28px 40px 24px;
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    header h1 { font-size: 26px; font-weight: 700; line-height: 1.3; }
+    header p { margin-top: 6px; font-size: 13px; opacity: 0.85; }
+    .header-meta { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+    .header-meta span { font-size: 12px; opacity: 0.8; }
+    .header-meta strong { opacity: 1; font-weight: 600; }
+    .data-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 11px;
+      margin-top: 12px;
+    }
+    .data-source a { color: #fff; text-decoration: underline; opacity: 0.9; }
+
+    /* ── Main Layout ── */
+    main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 48px; }
+
+    /* ── Section Title ── */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: #65676b;
+      margin-bottom: 14px;
+    }
+
+    /* ── KPI Cards ── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .kpi-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border-top: 4px solid #0866ff;
+      transition: box-shadow 0.2s;
+    }
+    .kpi-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .kpi-card.warn  { border-top-color: #f5a623; }
+    .kpi-card.good  { border-top-color: #36b37e; }
+    .kpi-card.info  { border-top-color: #6554c0; }
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #65676b;
+      margin-bottom: 8px;
+    }
+    .kpi-value { font-size: 34px; font-weight: 700; color: #1c1e21; line-height: 1; }
+    .kpi-sub { font-size: 12px; color: #65676b; margin-top: 6px; }
+
+    /* ── Charts Row ── */
+    .charts-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 720px) { .charts-row { grid-template-columns: 1fr; } }
+    .chart-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .chart-card h3 { font-size: 14px; font-weight: 600; color: #1c1e21; margin-bottom: 16px; }
+    .chart-wrap { position: relative; height: 240px; }
+
+    /* ── Table ── */
+    .table-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+      overflow-x: auto;
+    }
+    .table-card h3 { font-size: 14px; font-weight: 600; color: #1c1e21; margin-bottom: 4px; }
+    .table-note { font-size: 11px; color: #65676b; font-style: italic; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead tr { background: #f0f2f5; }
+    thead th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #65676b;
+      border-bottom: 2px solid #e4e6eb;
+      white-space: nowrap;
+    }
+    tbody tr { border-bottom: 1px solid #e4e6eb; transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #f7f8fa; }
+    tbody td { padding: 12px 14px; vertical-align: middle; }
+    tbody tr.manager-row td { font-weight: 700; background: #eef3ff; }
+    tbody tr.manager-row:hover { background: #e4ecff; }
+    .chain-arrow { color: #65676b; margin-right: 4px; font-size: 12px; }
+
+    /* Usage pill */
+    .usage-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .usage-pill.low   { background: #fde8e8; color: #b91c1c; }
+    .usage-pill.mid   { background: #fde8e8; color: #b91c1c; }
+    .usage-pill.good  { background: #fde8e8; color: #b91c1c; }
+    .usage-pill.yellow { background: #fef9c3; color: #92400e; }
+    .usage-pill.green  { background: #dcfce7; color: #166534; }
+
+    /* Progress bar */
+    .progress-bar-bg {
+      background: #e4e6eb;
+      border-radius: 4px;
+      height: 6px;
+      width: 80px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+    .progress-bar-fill { height: 100%; border-radius: 4px; }
+
+    /* ── Scope Note ── */
+    .scope-note {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+      font-size: 12px;
+      color: #444;
+      border-left: 4px solid #0866ff;
+    }
+    .scope-note strong { color: #1c1e21; }
+
+    /* ── Footer ── */
+    footer { text-align: center; font-size: 11px; color: #65676b; padding-bottom: 24px; }
+    footer a { color: #0866ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">AI4P · Product Design · Live Data</div>
+  <h1>AI4P Tool Usage Dashboard</h1>
+  <p>Manager &amp; Recursive Reports — Chuanqi Li's Org</p>
+    <div class="header-meta">
+    <span><strong>Data as of:</strong> Feb 22, 2026 (latest ds)</span>
+  </div>
+  <div class="data-source">
+    &#128279; Data sourced from
+    <a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank">UniDash · AI4P by Pillar</a>
+  </div>
+  <div style="margin-top:10px;background:rgba(255,255,255,0.18);border-radius:8px;padding:8px 14px;display:inline-block;font-size:13px;font-weight:600;">
+    &#128337; Last Updated: <span style="font-weight:700;">Feb 25, 2026 at 4:44 PM PT</span> &nbsp;|&nbsp; UniDash data as of: <span style="font-weight:700;">Feb 22, 2026</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- Scope Note -->
+  <div class="scope-note">
+    <strong>Dashboard Scope:</strong> This dashboard shows AI4P tool usage for <strong>Chuanqi Li</strong> and her direct and recursive reports who are Product Design Managers (PDM):
+    Bolun Yang, Eleanor Pachaud, and Vivian Wang (Ads). Data is pulled directly from UniDash with Manager Name = "Chuanqi Li".
+  </div>
+
+  <!-- KPI Cards -->
+  <p class="section-title">Key Metrics</p>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Org AI Usage (L4+/7)</div>
+      <div class="kpi-value">51%</div>
+      <div class="kpi-sub">Chuanqi Li's full org · 35 employees</div>
+    </div>
+    <div class="kpi-card good">
+      <div class="kpi-label">Highest Usage (PDM)</div>
+      <div class="kpi-value">57%</div>
+      <div class="kpi-sub">Vivian Wang (Ads) · 7 employees</div>
+    </div>
+    <div class="kpi-card warn">
+      <div class="kpi-label">Lowest Usage (PDM)</div>
+      <div class="kpi-value">36%</div>
+      <div class="kpi-sub">Bolun Yang · 11 employees</div>
+    </div>
+
+  </div>
+
+  <!-- Charts -->
+  <p class="section-title">Usage Breakdown</p>
+  <div class="charts-row">
+    <div class="chart-card">
+      <h3>AI Usage Rate (L4+/7) by Manager</h3>
+      <div class="chart-wrap">
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <h3>Team Size Distribution (PDMs)</h3>
+      <div class="chart-wrap">
+        <canvas id="doughnutChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Table -->
+  <p class="section-title">Manager and Recursive Reports</p>
+  <div class="table-card">
+    <h3>Detailed View — Manager: Chuanqi Li</h3>
+    <p class="table-note">
+      Note: This table is impacted by the global filters above, except date (which is limited to the latest ds).
+      Data sourced directly from UniDash AI4P by Pillar dashboard, Manager Name = "Chuanqi Li". As of 2026-02-22.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Mgr + Chain</th>
+          <th>Pillar Name</th>
+          <th>Function</th>
+          <th>Allocation Area Name</th>
+          <th>Team Group Name</th>
+          <th>L4+/7</th>
+          <th>Recursive Employee Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Chuanqi Li – top-level manager row -->
+        <tr class="manager-row">
+          <td><span class="chain-arrow">↳</span>Chuanqi Li</td>
+          <td>Ads &amp; Business Messaging Pillar</td>
+          <td>PD</td>
+          <td>ABM – Core Ads Growth</td>
+          <td>Core Ads Growth XFN Team Group</td>
+          <td>
+            <span class="usage-pill good">51%</span>
+            <span class="progress-bar-bg"><span class="progress-bar-fill" style="width:51%;background:#b91c1c;"></span></span>
+          </td>
+          <td>35</td>
+        </tr>
+        <!-- Bolun Yang – direct report -->
+        <tr>
+          <td style="padding-left:28px;"><span class="chain-arrow">↳</span>Bolun Yang</td>
+          <td>Ads &amp; Business Messaging Pillar</td>
+          <td>PD</td>
+          <td>ABM – Core Ads Growth</td>
+          <td>Core Ads Growth XFN Team Group</td>
+          <td>
+            <span class="usage-pill low">36%</span>
+            <span class="progress-bar-bg"><span class="progress-bar-fill" style="width:36%;background:#b91c1c;"></span></span>
+          </td>
+          <td>11</td>
+        </tr>
+        <!-- Eleanor Pachaud – direct report -->
+        <tr>
+          <td style="padding-left:28px;"><span class="chain-arrow">↳</span>Eleanor Pachaud</td>
+          <td>Ads &amp; Business Messaging Pillar</td>
+          <td>PD</td>
+          <td>ABM – Core Ads Growth</td>
+          <td>Core Ads Growth XFN Team Group</td>
+          <td>
+            <span class="usage-pill mid">42%</span>
+            <span class="progress-bar-bg"><span class="progress-bar-fill" style="width:42%;background:#b91c1c;"></span></span>
+          </td>
+          <td>12</td>
+        </tr>
+        <!-- Vivian Wang (Ads) – report of Eleanor -->
+        <tr>
+          <td style="padding-left:48px;"><span class="chain-arrow">↳</span>Vivian Wang (Ads)</td>
+          <td>Ads &amp; Business Messaging Pillar</td>
+          <td>PD</td>
+          <td>ABM – Core Ads Growth</td>
+          <td>Core Ads Growth XFN Team Group</td>
+          <td>
+            <span class="usage-pill good">57%</span>
+            <span class="progress-bar-bg"><span class="progress-bar-fill" style="width:57%;background:#b91c1c;"></span></span>
+          </td>
+          <td>7</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Usage Legend -->
+  <div style="background:#fff;border-radius:12px;padding:18px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.08);margin-bottom:32px;">
+    <p class="section-title" style="margin-bottom:10px;">Usage Rate Legend (L4+/7)</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;align-items:center;">
+      <span><span class="usage-pill low">Under 70%</span> &nbsp;Red — needs attention</span>
+      <span><span class="usage-pill yellow">70–84%</span> &nbsp;Yellow — progressing</span>
+      <span><span class="usage-pill green">85–100%</span> &nbsp;Green — on track</span>
+    </div>
+    <p style="margin-top:12px;font-size:11px;color:#65676b;">
+      <strong>L4+/7</strong> = Active on 4 or more of the last 7 days. Includes internal AI tools, Gemini, Zoom AI Companion, Figma AI, and other covered surfaces.
+    </p>
+  </div>
+
+  <!-- Session & Data Source Explanation -->
+  <div style="background:#fff;border-radius:12px;padding:22px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.08);margin-bottom:32px;border-left:4px solid #f5a623;">
+    <p style="font-size:13px;font-weight:700;color:#1c1e21;margin-bottom:10px;">&#9432; About This Dashboard &amp; Data Freshness</p>
+    <p style="font-size:12px;color:#444;line-height:1.7;margin-bottom:10px;">
+      This dashboard displays AI4P tool usage data for Chuanqi Li's org, sourced directly from
+      <a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank" style="color:#0866ff;">UniDash · AI4P by Pillar</a>.
+      UniDash is an <strong>internal Meta tool</strong> that requires an active Meta employee login session to access.
+      Because the data cannot be fetched publicly, this dashboard is refreshed by an automated script that
+      runs using <strong>Chuanqi Li's authenticated session</strong> — 3 times per day (8 AM, 12 PM, and 6 PM PT).
+    </p>
+    <p style="font-size:12px;color:#444;line-height:1.7;margin-bottom:10px;">
+      Each refresh pulls the latest available data from UniDash (typically updated daily), rebuilds this
+      dashboard, and saves it to Google Drive so colleagues can access it without needing a UniDash login.
+    </p>
+    <div style="background:#fff8e1;border-radius:8px;padding:12px 16px;border:1px solid #ffe082;">
+      <p style="font-size:12px;color:#7a5800;line-height:1.6;">
+        <strong>&#9888; If the data appears outdated or the dashboard is not refreshing:</strong><br/>
+        This is most likely because <strong>Chuanqi Li's Meta login session has expired or been closed</strong>.
+        The automated refresh script requires an active, authenticated session to access UniDash.
+        Once the session is renewed, the next scheduled refresh will automatically pull and update the data.
+        The <strong>"Last Updated"</strong> timestamp at the top of this page indicates when the data was last successfully retrieved.
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Data sourced from <a href="https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager" target="_blank">UniDash · AI4P by Pillar</a>
+  &nbsp;|&nbsp; Manager: Chuanqi Li &nbsp;|&nbsp; Function: PD &nbsp;|&nbsp; UniDash data as of 2026-02-22 &nbsp;|&nbsp; Last updated: Feb 25, 2026 at 4:44 PM PT
+</footer>
+
+<script>
+  // ── Bar Chart: AI Usage Rate by Manager ──
+  const barCtx = document.getElementById('barChart').getContext('2d');
+  new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Chuanqi Li\n(Org Total)', 'Bolun Yang', 'Eleanor\nPachaud', 'Vivian Wang\n(Ads)'],
+      datasets: [{
+        label: 'L4+/7 Usage Rate (%)',
+        data: [51, 36, 42, 57],
+        backgroundColor: ['#b91c1c', '#b91c1c', '#b91c1c', '#b91c1c'],
+        borderRadius: 6,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.parsed.y}% AI usage rate (L4+/7)`
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          ticks: { callback: v => v + '%', font: { size: 11 } },
+          grid: { color: '#e4e6eb' }
+        },
+        x: {
+          ticks: { font: { size: 11 } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── Doughnut Chart: Team Size (PDMs only) ──
+  const dCtx = document.getElementById('doughnutChart').getContext('2d');
+  new Chart(dCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Bolun Yang (11)', 'Eleanor Pachaud (12)', 'Vivian Wang Ads (7)'],
+      datasets: [{
+        data: [11, 12, 7],
+        backgroundColor: ['#f5a623', '#6554c0', '#36b37e'],
+        borderWidth: 2,
+        borderColor: '#fff',
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '62%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { size: 11 }, padding: 12, boxWidth: 12 }
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.label}: ${ctx.parsed} employees`
+          }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
