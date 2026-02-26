@@ -125,8 +125,9 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-bottom: 28px;
-      align-items: start;
+      align-items: stretch;
     }
+    .team-card { height: 100%; }
     @media (max-width: 900px) {
       .team-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -384,7 +385,7 @@
     <div class="team-card red">
       <div class="card-header">
         <div>
-          <div class="card-name">Bolun Yang</div>
+          <div class="card-name">Bolun<br/>Yang</div>
           <div class="card-count">11 recursive employees</div>
         </div>
         <div class="card-pct red">36%</div>
