@@ -122,10 +122,16 @@
     /* ── TEAM CARDS ── */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-bottom: 28px;
       align-items: start;
+    }
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .team-grid { grid-template-columns: 1fr; }
     }
     .team-card {
       background: #fff;
@@ -392,42 +398,39 @@
       </div>
     </div>
 
-    <!-- Eleanor Pachaud – direct report of Chuanqi, with Vivian nested below -->
-    <div class="team-card-wrapper">
-      <div class="team-card red">
-        <div class="card-header">
-          <div>
-            <div class="card-name">Eleanor Pachaud</div>
-            <div class="card-count">12 recursive employees</div>
-          </div>
-          <div class="card-pct red">42%</div>
+    <!-- Eleanor Pachaud – direct report of Chuanqi -->
+    <div class="team-card red">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Eleanor Pachaud</div>
+          <div class="card-count">12 recursive employees</div>
         </div>
-        <div class="progress-track">
-          <div class="progress-fill red" style="width:42%"></div>
-        </div>
-        <div class="card-footer">
-          <span class="status-pill red">Needs Attention</span>
-          <span class="card-target">Target: 80%</span>
-        </div>
+        <div class="card-pct red">42%</div>
       </div>
+      <div class="progress-track">
+        <div class="progress-fill red" style="width:42%"></div>
+      </div>
+      <div class="card-footer">
+        <span class="status-pill red">Needs Attention</span>
+        <span class="card-target">Target: 80%</span>
+      </div>
+    </div>
 
-      <!-- Vivian Wang – reports to Eleanor -->
-      <div class="team-card-sub yellow">
-        <div class="sub-label">Reports to Eleanor Pachaud</div>
-        <div class="card-header" style="margin-bottom:10px;">
-          <div>
-            <div class="card-name" style="font-size:14px;">Vivian Wang (Ads)</div>
-            <div class="card-count">7 recursive employees</div>
-          </div>
-          <div class="card-pct yellow" style="font-size:26px;">57%</div>
+    <!-- Vivian Wang (Ads) -->
+    <div class="team-card yellow">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Vivian Wang (Ads)</div>
+          <div class="card-count">7 recursive employees</div>
         </div>
-        <div class="progress-track" style="height:7px;margin-bottom:8px;">
-          <div class="progress-fill yellow" style="width:57%"></div>
-        </div>
-        <div class="card-footer">
-          <span class="status-pill yellow">Progressing</span>
-          <span class="card-target">Target: 80%</span>
-        </div>
+        <div class="card-pct yellow">57%</div>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill yellow" style="width:57%"></div>
+      </div>
+      <div class="card-footer">
+        <span class="status-pill yellow">Progressing</span>
+        <span class="card-target">Target: 80%</span>
       </div>
     </div>
 
