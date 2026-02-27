@@ -12,3 +12,79 @@ Call log:
 [2026-02-26 10:09:03] Filtered rows: []
 [2026-02-26 10:09:03] ERROR: No matching rows found. Keeping existing dashboard.
 [2026-02-26 10:10:11] DIAGNOSIS: www.internalfb.com is a Meta internal network resource. ERR_CONNECTION_CLOSED from sandbox — not accessible outside Meta VPN/network. Existing dashboard preserved.
+[02/26/2026, 22:12:21] ============================================================
+[02/26/2026, 22:12:21] Starting AI4P dashboard refresh (browser-tools pipeline)...
+[02/26/2026, 22:12:21] Retrieved at: Feb 26, 2026, 10:12 PM PT
+[02/26/2026, 22:12:21] Rows: Haihong Wang, Chuanqi Li, Bolun Yang, Eleanor Pachaud, Vivian Wang (Ads), Helen Zhou, Ilona Parkansky, Mirko Mandic, Dan Mortimore, Sunnie Sang, Iris Ozgur, Nikki Jahangiri, Adam Panasowich, Ricardo Esteves
+[02/26/2026, 22:12:21] Benchmark: topline=76%, PD=67%, asOf=2026-02-22
+[02/26/2026, 22:12:21] Dashboard HTML written to /home/ubuntu/ai4p-dashboard/index.html
+[02/26/2026, 22:12:25] Google Drive upload complete.
+[02/26/2026, 22:12:25] data.json written to /home/ubuntu/ai4p-dashboard/data.json
+[02/26/2026, 22:12:25] GitHub Pages push complete.
+[02/26/2026, 22:12:25] Updating Manus app dashboardData.ts...
+[02/26/2026, 22:12:25] ERROR updating Manus app: Error: ENOENT: no such file or directory, open '/home/ubuntu/ai4p-dashboard-app/client/src/lib/dashboardData.ts'
+[02/26/2026, 22:12:25] Dashboard refresh complete.
+[02/26/2026, 22:12:25] ============================================================
+[02/26/2026, 22:24:33] ============================================================
+[02/26/2026, 22:24:33] Starting AI4P dashboard refresh (browser-tools pipeline)...
+[02/26/2026, 22:24:33] Retrieved at: Feb 26, 2026, 10:24 PM PT
+[02/26/2026, 22:24:33] Rows: Haihong Wang, Chuanqi Li, Bolun Yang, Eleanor Pachaud, Vivian Wang (Ads), Helen Zhou, Ilona Parkansky, Mirko Mandic, Dan Mortimore, Sunnie Sang, Iris Ozgur, Nikki Jahangiri, Adam Panasowich, Ricardo Esteves
+[02/26/2026, 22:24:33] Benchmark: topline=76%, PD=67%, asOf=2026-02-22
+[02/26/2026, 22:24:33] Dashboard HTML written to /home/ubuntu/ai4p-dashboard/index.html
+[02/26/2026, 22:24:36] Google Drive upload complete.
+[02/26/2026, 22:24:36] data.json written to /home/ubuntu/ai4p-dashboard/data.json
+[02/26/2026, 22:24:37] GitHub Pages push complete.
+[02/26/2026, 22:24:37] Dashboard refresh complete.
+[02/26/2026, 22:24:37] ============================================================
+[02/26/2026, 22:29:42] ============================================================
+[02/26/2026, 22:29:42] Starting AI4P dashboard refresh (browser-tools pipeline)...
+[02/26/2026, 22:29:42] Retrieved at: Feb 26, 2026, 10:29 PM PT
+[02/26/2026, 22:29:42] Rows: Haihong Wang, Chuanqi Li, Bolun Yang, Eleanor Pachaud, Vivian Wang (Ads), Helen Zhou, Ilona Parkansky, Mirko Mandic, Dan Mortimore, Sunnie Sang, Iris Ozgur, Nikki Jahangiri, Adam Panasowich, Ricardo Esteves
+[02/26/2026, 22:29:42] Benchmark: topline=76%, PD=67%, asOf=2026-02-22
+[02/26/2026, 22:29:42] Dashboard HTML written to /home/ubuntu/ai4p-dashboard/index.html
+[02/26/2026, 22:29:45] Google Drive upload complete.
+[02/26/2026, 22:29:45] data.json written to /home/ubuntu/ai4p-dashboard/data.json
+[02/26/2026, 22:29:45] GitHub Pages push complete.
+[02/26/2026, 22:29:45] Dashboard refresh complete.
+[02/26/2026, 22:29:45] ============================================================
+[02/26/2026, 22:33:00] ============================================================
+[02/26/2026, 22:33:00] Starting AI4P dashboard refresh (browser-tools pipeline)...
+[02/26/2026, 22:33:00] Retrieved at: Feb 26, 2026, 10:33 PM PT
+[02/26/2026, 22:33:00] Rows: Haihong Wang, Chuanqi Li, Bolun Yang, Eleanor Pachaud, Vivian Wang (Ads), Helen Zhou, Ilona Parkansky, Mirko Mandic, Dan Mortimore, Sunnie Sang, Iris Ozgur, Nikki Jahangiri, Adam Panasowich, Ricardo Esteves
+[02/26/2026, 22:33:00] Benchmark: topline=76%, PD=67%, asOf=2026-02-22
+[02/26/2026, 22:33:00] Dashboard HTML written to /home/ubuntu/ai4p-dashboard/index.html
+[02/26/2026, 22:33:03] Google Drive upload complete.
+[02/26/2026, 22:33:03] data.json written to /home/ubuntu/ai4p-dashboard/data.json
+[02/26/2026, 22:33:03] GitHub Pages push complete.
+[02/26/2026, 22:33:03] Dashboard refresh complete.
+[02/26/2026, 22:33:03] ============================================================
+[02/26/2026, 22:39:44] ============================================================
+[02/26/2026, 22:39:44] Starting AI4P dashboard refresh (browser-tools pipeline)...
+[02/26/2026, 22:39:44] Retrieved at: Feb 26, 2026, 10:39 PM PT
+[02/26/2026, 22:39:44] Rows: Haihong Wang, Chuanqi Li, Bolun Yang, Eleanor Pachaud, Vivian Wang (Ads), Helen Zhou, Ilona Parkansky, Mirko Mandic, Dan Mortimore, Sunnie Sang, Iris Ozgur, Nikki Jahangiri, Adam Panasowich, Ricardo Esteves
+[02/26/2026, 22:39:44] Benchmark: topline=76%, PD=67%, asOf=2026-02-22
+[02/26/2026, 22:39:44] Dashboard HTML written to /home/ubuntu/ai4p-dashboard/index.html
+[02/26/2026, 22:39:47] Google Drive upload complete.
+[02/26/2026, 22:39:47] data.json written to /home/ubuntu/ai4p-dashboard/data.json
+[02/26/2026, 22:39:48] GitHub Pages push complete.
+[02/26/2026, 22:39:48] Dashboard refresh complete.
+[02/26/2026, 22:39:48] ============================================================
+[02/26/2026, 22:52:27] ============================================================
+[02/26/2026, 22:52:27] Starting AI4P dashboard refresh (browser-tools pipeline)...
+[02/26/2026, 22:52:27] Retrieved at: Feb 26, 2026, 10:52 PM PT
+[02/26/2026, 22:52:27] Rows: Haihong Wang, Chuanqi Li, Bolun Yang, Eleanor Pachaud, Vivian Wang (Ads), Helen Zhou, Ilona Parkansky, Mirko Mandic, Dan Mortimore, Sunnie Sang, Iris Ozgur, Nikki Jahangiri, Adam Panasowich, Ricardo Esteves
+[02/26/2026, 22:52:27] Benchmark: topline=76%, PD=67%, asOf=2026-02-22
+[02/26/2026, 22:52:27] Dashboard HTML written to /home/ubuntu/ai4p-dashboard/index.html
+[02/26/2026, 22:52:29] Google Drive upload complete.
+[02/26/2026, 22:52:29] data.json written to /home/ubuntu/ai4p-dashboard/data.json
+[02/26/2026, 22:52:29] Git warning: To https://github.com/shawn1122334455/ai4p-dashboard.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/shawn1122334455/ai4p-dashboard.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[02/26/2026, 22:52:29] GitHub Pages push complete.
+[02/26/2026, 22:52:29] Dashboard refresh complete.
+[02/26/2026, 22:52:29] ============================================================
