@@ -314,7 +314,13 @@ function generateStyledHtml(rows: RawRow[], retrievedAt: string, bm: BenchmarkIn
   const orgStroke = orgStatus === "red" ? "#ef4444" : orgStatus === "yellow" ? "#f59e0b" : "#22c55e";
 
   // PDM rows (all except Haihong Wang herself)
-  const pdmRows = rows.filter(r => !r.name.toLowerCase().includes("haihong"));
+  // Only show the PDMs specified in PDM_ORDER
+  const pdmRows = PDM_ORDER.map(p =>
+    rows.find(r =>
+      r.name.toLowerCase().includes(p.first.toLowerCase()) &&
+      r.name.toLowerCase().includes(p.last.toLowerCase())
+    )
+  ).filter((r): r is RawRow => r !== undefined);
   const rates = pdmRows.map(r => parsePct(r.l4_7));
   const highestRate = rates.length ? Math.max(...rates) : 0;
   const lowestRate  = rates.length ? Math.min(...rates) : 0;
