@@ -1,0 +1,14 @@
+{
+  "name": "ai4p-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scrape": "tsx run_pipeline.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  }
+}

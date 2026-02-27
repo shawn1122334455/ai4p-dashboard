@@ -18,12 +18,12 @@
  *    e. The pipeline writes dashboardData.ts, generates HTML, uploads to
  *       Google Drive, pushes to GitHub Pages, and saves a checkpoint.
  *
- * UNIDASH URL (Chuanqi Li pre-selected):
+ * UNIDASH URL (Haihong Wang pre-selected):
  * https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager
  * ?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D
  * &events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B
- * %22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C
- * %221764239757418050%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A
+ * %22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C
+ * %221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A
  * %221764239757418050%22%7D%7D%7D
  * &var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D
  *
@@ -69,16 +69,14 @@ const STATE_FILE      = path.join(DASHBOARD_DIR, "scrape_state.json");
 const LOG_FILE        = path.join(DASHBOARD_DIR, "scrape.log");
 const RCLONE_CONFIG   = path.join(process.env.HOME ?? "/home/ubuntu", ".gdrive-rclone.ini");
 const GDRIVE_FOLDER_ID = "1MPyQxitnirWRe9JGB5Yvoq42G4lXT5zU";
-const MANUS_APP_DIR   = path.resolve(DASHBOARD_DIR, "../ai4p-dashboard-app");
-const MANUS_DATA_FILE = path.join(MANUS_APP_DIR, "client/src/lib/dashboardData.ts");
 
 const UNIDASH_URL =
   "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/" +
   "ai4p_by_pillar/overall_one_pager" +
   "?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D" +
   "&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B" +
-  "%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C" +
-  "%221764239757418050%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A" +
+  "%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C" +
+  "%221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A" +
   "%221764239757418050%22%7D%7D%7D" +
   "&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D";
 
@@ -120,10 +118,10 @@ const PDM_ORDER: Array<{
   displayName: string; id: string; first: string; last: string;
   teamGroup: string; isDirect: boolean;
 }> = [
-  { displayName: "Bolun Yang",      id: "bolun-yang",      first: "Bolun",   last: "Yang",    teamGroup: "Core Ads Growth XFN Team Group", isDirect: true },
-  { displayName: "Eleanor Pachaud", id: "eleanor-pachaud", first: "Eleanor", last: "Pachaud", teamGroup: "Core Ads Growth XFN Team Group", isDirect: true },
-  { displayName: "Vivian Wang",     id: "vivian-wang",     first: "Vivian",  last: "Wang",    teamGroup: "Core Ads Growth XFN Team Group", isDirect: false },
-  { displayName: "Helen Zhou",      id: "helen-zhou",      first: "Helen",   last: "Zhou",    teamGroup: "Core Ads Growth ENG Team Group", isDirect: true },
+  { displayName: "Chuanqi Li",      id: "chuanqi-li",      first: "Chuanqi", last: "Li",      teamGroup: "Core Ads Growth XFN Team Group",                        isDirect: true },
+  { displayName: "Mirko Mandic",    id: "mirko-mandic",    first: "Mirko",   last: "Mandic",  teamGroup: "Core Ads Growth XFN Team Group",                        isDirect: true },
+  { displayName: "Ilona Parkansky", id: "ilona-parkansky", first: "Ilona",   last: "Parkansky", teamGroup: "Monetization PG - Central & Ecosystems XFN Team Group", isDirect: true },
+  { displayName: "Nikki Jahangiri", id: "nikki-jahangiri", first: "Nikki",   last: "Jahangiri", teamGroup: "Core Ads Growth XFN Team Group",                      isDirect: true },
 ];
 
 // ── dashboardData.ts generator ────────────────────────────────────────────────
@@ -157,9 +155,9 @@ function buildDashboardDataTs(
     }`);
   }
 
-  const orgRow   = rows.find((r) => r.name.toLowerCase().includes("chuanqi"));
-  const orgRate  = orgRow ? parsePct(orgRow.l4_7) : 51;
-  const orgCount = orgRow ? (parseInt(orgRow.empCount, 10) || 35) : 35;
+  const orgRow   = rows.find((r) => r.name.toLowerCase().includes("haihong"));
+  const orgRate  = orgRow ? parsePct(orgRow.l4_7) : 67;
+  const orgCount = orgRow ? (parseInt(orgRow.empCount, 10) || 94) : 94;
 
   return `// AI4P Dashboard Data
 // Design: Modern SaaS Dashboard — Meta-blue accents, vivid status colors, clean white cards
@@ -215,7 +213,7 @@ export function getStatusLabel(status: "red" | "yellow" | "green"): string {
 }
 
 export const dashboardData: OrgData = {
-  managerName: "Chuanqi Li",
+  managerName: "Haihong Wang",
   orgUsageRate: ${orgRate},
   totalEmployees: ${orgCount},
   pillar: "Ads & Business Messaging Pillar",
@@ -244,9 +242,9 @@ function buildDataJson(
   retrievedAt: string,
   bm: BenchmarkInput
 ): object {
-  const orgRow   = rows.find((r) => r.name.toLowerCase().includes("chuanqi"));
-  const orgRate  = orgRow ? parsePct(orgRow.l4_7) : 51;
-  const orgCount = orgRow ? (parseInt(orgRow.empCount, 10) || 35) : 35;
+  const orgRow   = rows.find((r) => r.name.toLowerCase().includes("haihong"));
+  const orgRate  = orgRow ? parsePct(orgRow.l4_7) : 67;
+  const orgCount = orgRow ? (parseInt(orgRow.empCount, 10) || 94) : 94;
 
   const pdms = [];
   for (const p of PDM_ORDER) {
@@ -271,7 +269,7 @@ function buildDataJson(
   }
 
   return {
-    managerName: "Chuanqi Li",
+    managerName: "Haihong Wang",
     orgUsageRate: orgRate,
     totalEmployees: orgCount,
     pillar: "Ads & Business Messaging Pillar",
@@ -305,7 +303,7 @@ function generateSimpleHtml(rows: RawRow[], retrievedAt: string, bm: BenchmarkIn
 <style>body{font-family:sans-serif;padding:24px}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ddd;padding:8px 12px}th{background:#1877f2;color:#fff}</style>
 </head>
 <body>
-<h1>AI4P Tool Usage — Chuanqi Li's Org</h1>
+<h1>AI4P Tool Usage — Haihong Wang's Org</h1>
 <p>Topline: <strong>${bm.toplineRate}%</strong> | Data as of: ${bm.dataAsOf} | Last updated: ${retrievedAt}</p>
 <table><thead><tr><th>Manager</th><th>L4+/7</th><th>Employees</th><th>Team Group</th></tr></thead>
 <tbody>${rowsHtml}</tbody></table>
@@ -352,32 +350,6 @@ async function pushToGithub(retrievedAt: string, dataJson: object): Promise<void
   log("GitHub Pages push complete.");
 }
 
-// ── Manus React app update ────────────────────────────────────────────────────
-
-async function pushToManusApp(rows: RawRow[], retrievedAt: string, bm: BenchmarkInput): Promise<void> {
-  log("Updating Manus app dashboardData.ts...");
-  try {
-    const content = buildDashboardDataTs(rows, retrievedAt, bm);
-    fs.writeFileSync(MANUS_DATA_FILE, content, "utf8");
-    log("  dashboardData.ts updated");
-    const cmds: [string, string[]][] = [
-      ["git", ["-C", MANUS_APP_DIR, "add", "client/src/lib/dashboardData.ts"]],
-      ["git", ["-C", MANUS_APP_DIR, "commit", "-m", `Auto-refresh: ${retrievedAt}`]],
-      ["git", ["-C", MANUS_APP_DIR, "push", "origin", "main"]],
-    ];
-    for (const [cmd, args] of cmds) {
-      try {
-        execFileSync(cmd, args, { stdio: "pipe" });
-      } catch (e: any) {
-        const stderr = e.stderr?.toString() ?? "";
-        if (!stderr.includes("nothing to commit")) log(`  Git warning: ${stderr.trim()}`);
-      }
-    }
-    log("  Manus app push complete.");
-  } catch (e) {
-    log(`ERROR updating Manus app: ${e}`);
-  }
-}
 
 // ── Main pipeline entry point ─────────────────────────────────────────────────
 
@@ -441,8 +413,6 @@ export async function runPipeline(input: {
   // Push to GitHub Pages (includes data.json)
   await pushToGithub(retrievedAt, dataJson);
 
-  // Update Manus React app
-  await pushToManusApp(rows, retrievedAt, benchmark);
 
   log("Dashboard refresh complete.");
   log("=".repeat(60));
