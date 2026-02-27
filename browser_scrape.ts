@@ -495,7 +495,7 @@ ${pdmCardsHtml}
       </div>
       <div class="about-item">
         <div class="about-title">How data is refreshed</div>
-        <p>An automated script runs <strong>3× per day</strong> (8 AM, 12 PM, and 6 PM PT) using an authenticated Meta session to pull the latest data from UniDash. The dashboard is then rebuilt and published automatically — no manual action needed.</p>
+        <p>An automated script runs <strong>3× per day</strong> (8 AM, 12 PM, and 4 PM PT) using an authenticated Meta session to pull the latest data from UniDash. The dashboard is then rebuilt and published automatically — no manual action needed.</p>
       </div>
       <div class="about-item">
         <div class="about-title">What L4+/7 means</div>
@@ -512,7 +512,7 @@ ${pdmCardsHtml}
   </div>
 </main>
 <footer>
-  AI4P Tool Usage Dashboard &nbsp;·&nbsp; Haihong Wang's Org &nbsp;·&nbsp; Data sourced from UniDash &nbsp;·&nbsp; Refreshed 3× daily at 8 AM, 12 PM &amp; 6 PM PT
+  AI4P Tool Usage Dashboard &nbsp;·&nbsp; Haihong Wang's Org &nbsp;·&nbsp; Data sourced from UniDash &nbsp;·&nbsp; Refreshed 3× daily at 8 AM, 12 PM &amp; 4 PM PT
 </footer>
 </body></html>`;
 }
