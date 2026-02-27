@@ -63,8 +63,8 @@ import type { RawRow, BenchmarkInput, ScraperState } from "./types.js";
 
 const DASHBOARD_DIR   = path.resolve(import.meta.dirname ?? path.dirname(new URL(import.meta.url).pathname));
 const HTML_OUTPUT     = path.join(DASHBOARD_DIR, "index.html");
-const JSON_OUTPUT     = path.join(DASHBOARD_DIR, "data.json");
-const GITHUB_RAW_URL  = "https://raw.githubusercontent.com/shawn1122334455/ai4p-dashboard/main/data.json";
+const JSON_OUTPUT     = path.join(DASHBOARD_DIR, "data-haihong.json");
+const GITHUB_RAW_URL  = "https://raw.githubusercontent.com/shawn1122334455/ai4p-dashboard/main/data-haihong.json";
 const STATE_FILE      = path.join(DASHBOARD_DIR, "scrape_state.json");
 const LOG_FILE        = path.join(DASHBOARD_DIR, "scrape.log");
 const RCLONE_CONFIG   = path.join(process.env.HOME ?? "/home/ubuntu", ".gdrive-rclone.ini");
@@ -539,10 +539,10 @@ async function uploadToGdrive(): Promise<boolean> {
 async function pushToGithub(retrievedAt: string, dataJson: object): Promise<void> {
   // Write data.json to the repo so the live dashboard can fetch it without republishing
   fs.writeFileSync(JSON_OUTPUT, JSON.stringify(dataJson, null, 2), "utf8");
-  log(`data.json written to ${JSON_OUTPUT}`);
+  log(`data-haihong.json written to ${JSON_OUTPUT}`);
 
   const cmds: [string, string[]][] = [
-    ["git", ["-C", DASHBOARD_DIR, "add", "index.html", "data.json"]],
+    ["git", ["-C", DASHBOARD_DIR, "add", "index.html", "data-haihong.json"]],
     ["git", ["-C", DASHBOARD_DIR, "commit", "-m", `Auto-refresh: ${retrievedAt}`]],
     ["git", ["-C", DASHBOARD_DIR, "push", "origin", "main"]],
   ];
