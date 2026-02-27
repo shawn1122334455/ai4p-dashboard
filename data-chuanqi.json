@@ -1,17 +1,17 @@
 {
   "managerName": "Chuanqi Li",
-  "orgUsageRate": 51,
+  "orgUsageRate": 71,
   "totalEmployees": 35,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM – Core Ads Growth",
-  "lastUpdated": "Feb 27, 2026, 8:11 AM PT",
-  "unidashDataAsOf": "2026-02-22",
+  "lastUpdated": "Feb 27, 2026, 9:15 AM PT",
+  "unidashDataAsOf": "2026-02-24",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
-    "toplineRate": 76,
+    "toplineRate": 82,
     "pdFunctionRate": 67,
     "pdFunctionFTEs": "2k",
-    "dataAsOf": "2026-02-22"
+    "dataAsOf": "2026-02-24"
   },
   "pdms": [
     {
@@ -20,7 +20,7 @@
       "firstName": "Bolun",
       "lastName": "Yang",
       "recursiveEmployees": 11,
-      "usageRate": 36,
+      "usageRate": 64,
       "pillar": "Ads & Business Messaging Pillar",
       "function": "PD",
       "allocationArea": "ABM – Core Ads Growth",
@@ -33,7 +33,7 @@
       "firstName": "Eleanor",
       "lastName": "Pachaud",
       "recursiveEmployees": 12,
-      "usageRate": 42,
+      "usageRate": 67,
       "pillar": "Ads & Business Messaging Pillar",
       "function": "PD",
       "allocationArea": "ABM – Core Ads Growth",
@@ -42,11 +42,11 @@
     },
     {
       "id": "vivian-wang",
-      "name": "Vivian Wang",
+      "name": "Vivian Wang (Ads)",
       "firstName": "Vivian",
       "lastName": "Wang",
       "recursiveEmployees": 7,
-      "usageRate": 57,
+      "usageRate": 71,
       "pillar": "Ads & Business Messaging Pillar",
       "function": "PD",
       "allocationArea": "ABM – Core Ads Growth",
