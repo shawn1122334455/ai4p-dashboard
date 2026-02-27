@@ -245,6 +245,25 @@ function buildDataJson(
   const orgRate  = orgRow ? parsePct(orgRow.l4_7) : 67;
   const orgCount = orgRow ? (parseInt(orgRow.empCount, 10) || 94) : 94;
 
+  // Read previous rates from existing data-haihong.json before overwriting
+  let prevOrgRate: number | null = null;
+  const prevPdmRates: Record<string, number> = {};
+  let prevToplineRate: number | null = null;
+  let prevPdFunctionRate: number | null = null;
+  if (fs.existsSync(JSON_OUTPUT)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(JSON_OUTPUT, "utf8"));
+      prevOrgRate = typeof prev.orgUsageRate === "number" ? prev.orgUsageRate : null;
+      prevToplineRate = typeof prev.benchmark?.toplineRate === "number" ? prev.benchmark.toplineRate : null;
+      prevPdFunctionRate = typeof prev.benchmark?.pdFunctionRate === "number" ? prev.benchmark.pdFunctionRate : null;
+      if (Array.isArray(prev.pdms)) {
+        for (const p of prev.pdms) {
+          if (p.id && typeof p.usageRate === "number") prevPdmRates[p.id] = p.usageRate;
+        }
+      }
+    } catch { /* ignore */ }
+  }
+
   const pdms = [];
   for (const p of PDM_ORDER) {
     const row = rows.find(
@@ -252,13 +271,16 @@ function buildDataJson(
              r.name.toLowerCase().includes(p.last.toLowerCase())
     );
     if (!row) continue;
+    const currentRate = parsePct(row.l4_7);
+    const previousRate = prevPdmRates[p.id] ?? null;
     pdms.push({
       id: p.id,
       name: p.displayName,
       firstName: p.first,
       lastName: p.last,
       recursiveEmployees: parseInt(row.empCount, 10) || 0,
-      usageRate: parsePct(row.l4_7),
+      usageRate: currentRate,
+      previousRate,
       pillar: "Ads & Business Messaging Pillar",
       function: "PD",
       allocationArea: "ABM – Core Ads Growth",
@@ -270,6 +292,7 @@ function buildDataJson(
   return {
     managerName: "Haihong Wang",
     orgUsageRate: orgRate,
+    previousOrgRate: prevOrgRate,
     totalEmployees: orgCount,
     pillar: "Ads & Business Messaging Pillar",
     allocationArea: "ABM – Core Ads Growth",
@@ -278,7 +301,9 @@ function buildDataJson(
     unidashUrl: UNIDASH_URL,
     benchmark: {
       toplineRate: bm.toplineRate,
+      previousToplineRate: prevToplineRate,
       pdFunctionRate: bm.pdFunctionRate,
+      previousPdFunctionRate: prevPdFunctionRate,
       pdFunctionFTEs: "2k",
       dataAsOf: bm.dataAsOf,
     },
