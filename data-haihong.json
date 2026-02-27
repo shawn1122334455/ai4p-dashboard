@@ -1,0 +1,70 @@
+{
+  "lastUpdated": "Feb 27, 2026, 8:22 AM PT",
+  "unidashDataAsOf": "2026-02-22",
+  "manager": {
+    "name": "Haihong Wang",
+    "pillar": "Ads & Business Messaging Pillar",
+    "function": "PD",
+    "allocationArea": "ABM - Core Ads Growth",
+    "teamGroup": "Core Ads Growth Team Group",
+    "rate": 67,
+    "employees": 94
+  },
+  "benchmark": {
+    "toplineRate": 76,
+    "pdFunctionRate": 67,
+    "dataAsOf": "2026-02-22"
+  },
+  "pdms": [
+    {
+      "name": "Chuanqi Li",
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "rate": 51,
+      "employees": 35,
+      "target": 80
+    },
+    {
+      "name": "Bolun Yang",
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "rate": 36,
+      "employees": 11,
+      "target": 80
+    },
+    {
+      "name": "Eleanor Pachaud",
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "rate": 42,
+      "employees": 12,
+      "target": 80
+    },
+    {
+      "name": "Vivian Wang (Ads)",
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "rate": 52,
+      "employees": 7,
+      "target": 80
+    },
+    {
+      "name": "Helen Zhou",
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth ENG Team Group",
+      "rate": 80,
+      "employees": 5,
+      "target": 80
+    }
+  ]
+}
