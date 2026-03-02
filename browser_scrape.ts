@@ -62,8 +62,9 @@ import type { RawRow, BenchmarkInput, ScraperState } from "./types.js";
 // ── Paths ─────────────────────────────────────────────────────────────────────
 
 const DASHBOARD_DIR   = path.resolve(import.meta.dirname ?? path.dirname(new URL(import.meta.url).pathname));
-const JSON_OUTPUT     = path.join(DASHBOARD_DIR, "data-haihong.json");
-const GITHUB_RAW_URL  = "https://raw.githubusercontent.com/shawn1122334455/ai4p-dashboard/main/data-haihong.json";
+const HTML_OUTPUT     = path.join(DASHBOARD_DIR, "index.html");
+const JSON_OUTPUT     = path.join(DASHBOARD_DIR, "data.json");
+const GITHUB_RAW_URL  = "https://raw.githubusercontent.com/shawn1122334455/ai4p-dashboard/main/data.json";
 const STATE_FILE      = path.join(DASHBOARD_DIR, "scrape_state.json");
 const LOG_FILE        = path.join(DASHBOARD_DIR, "scrape.log");
 const RCLONE_CONFIG   = path.join(process.env.HOME ?? "/home/ubuntu", ".gdrive-rclone.ini");
@@ -245,25 +246,6 @@ function buildDataJson(
   const orgRate  = orgRow ? parsePct(orgRow.l4_7) : 67;
   const orgCount = orgRow ? (parseInt(orgRow.empCount, 10) || 94) : 94;
 
-  // Read previous rates from existing data-haihong.json before overwriting
-  let prevOrgRate: number | null = null;
-  const prevPdmRates: Record<string, number> = {};
-  let prevToplineRate: number | null = null;
-  let prevPdFunctionRate: number | null = null;
-  if (fs.existsSync(JSON_OUTPUT)) {
-    try {
-      const prev = JSON.parse(fs.readFileSync(JSON_OUTPUT, "utf8"));
-      prevOrgRate = typeof prev.orgUsageRate === "number" ? prev.orgUsageRate : null;
-      prevToplineRate = typeof prev.benchmark?.toplineRate === "number" ? prev.benchmark.toplineRate : null;
-      prevPdFunctionRate = typeof prev.benchmark?.pdFunctionRate === "number" ? prev.benchmark.pdFunctionRate : null;
-      if (Array.isArray(prev.pdms)) {
-        for (const p of prev.pdms) {
-          if (p.id && typeof p.usageRate === "number") prevPdmRates[p.id] = p.usageRate;
-        }
-      }
-    } catch { /* ignore */ }
-  }
-
   const pdms = [];
   for (const p of PDM_ORDER) {
     const row = rows.find(
@@ -271,16 +253,13 @@ function buildDataJson(
              r.name.toLowerCase().includes(p.last.toLowerCase())
     );
     if (!row) continue;
-    const currentRate = parsePct(row.l4_7);
-    const previousRate = prevPdmRates[p.id] ?? null;
     pdms.push({
       id: p.id,
       name: p.displayName,
       firstName: p.first,
       lastName: p.last,
       recursiveEmployees: parseInt(row.empCount, 10) || 0,
-      usageRate: currentRate,
-      previousRate,
+      usageRate: parsePct(row.l4_7),
       pillar: "Ads & Business Messaging Pillar",
       function: "PD",
       allocationArea: "ABM – Core Ads Growth",
@@ -292,7 +271,6 @@ function buildDataJson(
   return {
     managerName: "Haihong Wang",
     orgUsageRate: orgRate,
-    previousOrgRate: prevOrgRate,
     totalEmployees: orgCount,
     pillar: "Ads & Business Messaging Pillar",
     allocationArea: "ABM – Core Ads Growth",
@@ -301,9 +279,7 @@ function buildDataJson(
     unidashUrl: UNIDASH_URL,
     benchmark: {
       toplineRate: bm.toplineRate,
-      previousToplineRate: prevToplineRate,
       pdFunctionRate: bm.pdFunctionRate,
-      previousPdFunctionRate: prevPdFunctionRate,
       pdFunctionFTEs: "2k",
       dataAsOf: bm.dataAsOf,
     },
@@ -546,7 +522,7 @@ ${pdmCardsHtml}
 async function uploadToGdrive(): Promise<boolean> {
   try {
     execFileSync("rclone", [
-      "copy", JSON_OUTPUT,
+      "copy", HTML_OUTPUT,
       `manus_google_drive:${GDRIVE_FOLDER_ID}`,
       "--config", RCLONE_CONFIG, "--drive-use-trash=false",
     ], { stdio: "pipe" });
@@ -563,10 +539,10 @@ async function uploadToGdrive(): Promise<boolean> {
 async function pushToGithub(retrievedAt: string, dataJson: object): Promise<void> {
   // Write data.json to the repo so the live dashboard can fetch it without republishing
   fs.writeFileSync(JSON_OUTPUT, JSON.stringify(dataJson, null, 2), "utf8");
-  log(`data-haihong.json written to ${JSON_OUTPUT}`);
+  log(`data.json written to ${JSON_OUTPUT}`);
 
   const cmds: [string, string[]][] = [
-    ["git", ["-C", DASHBOARD_DIR, "add", "data-haihong.json"]],
+    ["git", ["-C", DASHBOARD_DIR, "add", "index.html", "data.json"]],
     ["git", ["-C", DASHBOARD_DIR, "commit", "-m", `Auto-refresh: ${retrievedAt}`]],
     ["git", ["-C", DASHBOARD_DIR, "push", "origin", "main"]],
   ];
@@ -628,6 +604,11 @@ export async function runPipeline(input: {
   state.lastSuccessRows     = rows;
   state.lastFailureReason   = null;
   saveState(state);
+
+  // Generate HTML
+  const html = generateStyledHtml(rows, retrievedAt, benchmark);
+  fs.writeFileSync(HTML_OUTPUT, html, "utf8");
+  log(`Dashboard HTML written to ${HTML_OUTPUT}`);
 
   // Upload to Google Drive
   const driveOk = await uploadToGdrive();

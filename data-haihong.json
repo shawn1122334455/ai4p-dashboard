@@ -1,95 +1,145 @@
 {
-  "lastUpdated": "Mar 1, 2026, 4:39 PM PT",
-  "unidashDataAsOf": "2026-02-25",
-  "manager": {
-    "name": "Haihong Wang",
-    "pillar": "Ads & Business Messaging Pillar",
-    "function": "PD",
-    "allocationArea": "ABM - Core Ads Growth",
-    "teamGroup": "Core Ads Growth Team Group",
-    "rate": 67,
-    "employees": 94
-  },
+  "managerName": "Haihong Wang",
+  "orgUsageRate": 80,
+  "previousOrgUsageRate": 79,
+  "totalEmployees": 94,
+  "pillar": "Ads & Business Messaging Pillar",
+  "allocationArea": "ABM - Core Ads Growth",
+  "lastUpdated": "Mar 2, 2026, 6:57 AM PT",
+  "unidashDataAsOf": "2026-02-26",
+  "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
-    "toplineRate": 83,
+    "toplineRate": 85,
     "pdFunctionRate": 67,
-    "dataAsOf": "2026-02-25"
+    "pdFunctionFTEs": "2k",
+    "dataAsOf": "2026-02-26"
   },
   "pdms": [
     {
+      "id": "haihong-wang",
       "name": "Haihong Wang",
-      "rate": 80,
-      "employees": 94
+      "firstName": "Haihong",
+      "lastName": "Wang",
+      "usageRate": 80,
+      "previousRate": 79,
+      "recursiveEmployees": 94,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
     },
     {
-      "name": "Chuanqi Li",
-      "rate": 80,
-      "employees": 35
-    },
-    {
-      "name": "Bolun Yang",
-      "rate": 82,
-      "employees": 11
-    },
-    {
-      "name": "Eleanor Pachaud",
-      "rate": 67,
-      "employees": 12
-    },
-    {
-      "name": "Vivian Wang (Ads)",
-      "rate": 71,
-      "employees": 7
-    },
-    {
-      "name": "Helen Zhou",
-      "rate": 80,
-      "employees": 5
-    },
-    {
+      "id": "ilona-parkansky",
       "name": "Ilona Parkansky",
-      "rate": 82,
-      "employees": 11
+      "firstName": "Ilona",
+      "lastName": "Parkansky",
+      "usageRate": 82,
+      "previousRate": 82,
+      "recursiveEmployees": 11,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "Design",
+      "allocationArea": "ABM - Central & Ecosystems",
+      "teamGroup": "Monetization PG - Central & Ecosystems XFN Team Group",
+      "isDirectReport": true
     },
     {
+      "id": "mirko-mandic",
       "name": "Mirko Mandic",
-      "rate": 73,
-      "employees": 26
+      "firstName": "Mirko",
+      "lastName": "Mandic",
+      "usageRate": 73,
+      "previousRate": 77,
+      "recursiveEmployees": 26,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
     },
     {
+      "id": "dan-mortimore",
       "name": "Dan Mortimore",
-      "rate": 83,
-      "employees": 12
+      "firstName": "Dan",
+      "lastName": "Mortimore",
+      "usageRate": 83,
+      "previousRate": 83,
+      "recursiveEmployees": 12,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
     },
     {
-      "name": "Sunnie Sang",
-      "rate": 60,
-      "employees": 5
-    },
-    {
-      "name": "Iris Ozgur",
-      "rate": 70,
-      "employees": 10
-    },
-    {
+      "id": "nikki-jahangiri",
       "name": "Nikki Jahangiri",
-      "rate": 81,
-      "employees": 16
+      "firstName": "Nikki",
+      "lastName": "Jahangiri",
+      "usageRate": 81,
+      "previousRate": 88,
+      "recursiveEmployees": 16,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
     },
     {
+      "id": "iris-ozgur",
+      "name": "Iris Ozgur",
+      "firstName": "Iris",
+      "lastName": "Ozgur",
+      "usageRate": 70,
+      "previousRate": 80,
+      "recursiveEmployees": 10,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
+    },
+    {
+      "id": "adam-panasowich",
       "name": "Adam Panasowich",
-      "rate": 67,
-      "employees": 6
+      "firstName": "Adam",
+      "lastName": "Panasowich",
+      "usageRate": 67,
+      "previousRate": 83,
+      "recursiveEmployees": 6,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
     },
     {
+      "id": "ricardo-esteves",
       "name": "Ricardo Esteves",
-      "rate": 83,
-      "employees": 6
+      "firstName": "Ricardo",
+      "lastName": "Esteves",
+      "usageRate": 83,
+      "previousRate": 83,
+      "recursiveEmployees": 6,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
+    },
+    {
+      "id": "sunnie-sang",
+      "name": "Sunnie Sang",
+      "firstName": "Sunnie",
+      "lastName": "Sang",
+      "usageRate": 60,
+      "previousRate": 60,
+      "recursiveEmployees": 5,
+      "pillar": "Ads & Business Messaging Pillar",
+      "function": "PD",
+      "allocationArea": "ABM - Core Ads Growth",
+      "teamGroup": "Core Ads Growth XFN Team Group",
+      "isDirectReport": true
     }
-  ],
-  "orgUsageRate": 79,
-  "totalEmployees": 94,
-  "previousOrgUsageRate": 79,
-  "topline": 85,
-  "as_of_date": "2026-02-26"
+  ]
 }
