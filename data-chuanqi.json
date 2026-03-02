@@ -16,20 +16,6 @@
   },
   "pdms": [
     {
-      "id": "chuanqi-li",
-      "name": "Chuanqi Li",
-      "firstName": "Chuanqi",
-      "lastName": "Li",
-      "usageRate": 80,
-      "previousRate": 71,
-      "recursiveEmployees": 35,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM \u2013 Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
-    },
-    {
       "id": "bolun-yang",
       "name": "Bolun Yang",
       "firstName": "Bolun",
