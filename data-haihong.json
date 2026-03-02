@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "Feb 27, 2026, 4:13 PM PT",
+  "lastUpdated": "Mar 1, 2026, 4:39 PM PT",
   "unidashDataAsOf": "2026-02-25",
   "manager": {
     "name": "Haihong Wang",
@@ -17,67 +17,79 @@
   },
   "pdms": [
     {
+      "name": "Haihong Wang",
+      "rate": 80,
+      "employees": 94
+    },
+    {
       "name": "Chuanqi Li",
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "rate": 51,
-      "employees": 35,
-      "target": 80,
-      "usageRate": 71,
-      "recursiveEmployees": 35
+      "rate": 80,
+      "employees": 35
     },
     {
       "name": "Bolun Yang",
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "rate": 36,
-      "employees": 11,
-      "target": 80,
-      "usageRate": 64,
-      "recursiveEmployees": 11
+      "rate": 82,
+      "employees": 11
     },
     {
       "name": "Eleanor Pachaud",
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "rate": 42,
-      "employees": 12,
-      "target": 80,
-      "usageRate": 67,
-      "recursiveEmployees": 12
+      "rate": 67,
+      "employees": 12
     },
     {
       "name": "Vivian Wang (Ads)",
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "rate": 52,
-      "employees": 7,
-      "target": 80,
-      "usageRate": 71,
-      "recursiveEmployees": 7
+      "rate": 71,
+      "employees": 7
     },
     {
       "name": "Helen Zhou",
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth ENG Team Group",
       "rate": 80,
-      "employees": 5,
-      "target": 80,
-      "usageRate": 80,
-      "recursiveEmployees": 5
+      "employees": 5
+    },
+    {
+      "name": "Ilona Parkansky",
+      "rate": 82,
+      "employees": 11
+    },
+    {
+      "name": "Mirko Mandic",
+      "rate": 73,
+      "employees": 26
+    },
+    {
+      "name": "Dan Mortimore",
+      "rate": 83,
+      "employees": 12
+    },
+    {
+      "name": "Sunnie Sang",
+      "rate": 60,
+      "employees": 5
+    },
+    {
+      "name": "Iris Ozgur",
+      "rate": 70,
+      "employees": 10
+    },
+    {
+      "name": "Nikki Jahangiri",
+      "rate": 81,
+      "employees": 16
+    },
+    {
+      "name": "Adam Panasowich",
+      "rate": 67,
+      "employees": 6
+    },
+    {
+      "name": "Ricardo Esteves",
+      "rate": 83,
+      "employees": 6
     }
   ],
   "orgUsageRate": 79,
   "totalEmployees": 94,
-  "previousOrgUsageRate": 79
+  "previousOrgUsageRate": 79,
+  "topline": 85,
+  "as_of_date": "2026-02-26"
 }
