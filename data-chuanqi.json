@@ -1,12 +1,12 @@
 {
   "managerName": "Chuanqi Li",
-  "orgUsageRate": 86,
+  "orgUsageRate": 83,
   "previousOrgUsageRate": 80,
   "totalEmployees": 35,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM \u2013 Core Ads Growth",
-  "lastUpdated": "3/5/2026, 8:44 AM MT",
-  "unidashDataAsOf": "2026-03-01",
+  "lastUpdated": "3/6/2026, 9:36 AM MT",
+  "unidashDataAsOf": "2026-03-02",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
     "toplineRate": 87,
@@ -16,60 +16,29 @@
   },
   "pdms": [
     {
-      "id": "bolun-yang",
       "name": "Bolun Yang",
-      "firstName": "Bolun",
-      "lastName": "Yang",
-      "usageRate": 82,
+      "rate": 73,
       "previousRate": 82,
-      "recursiveEmployees": 11,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
+      "employees": 11
     },
     {
-      "id": "eleanor-pachaud",
       "name": "Eleanor Pachaud",
-      "firstName": "Eleanor",
-      "lastName": "Pachaud",
-      "usageRate": 75,
-      "previousRate": 67,
-      "recursiveEmployees": 12,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
+      "rate": 75,
+      "previousRate": 75,
+      "employees": 12
     },
     {
-      "id": "vivian-wang-ads",
       "name": "Vivian Wang (Ads)",
-      "firstName": "Vivian",
-      "lastName": "Wang (Ads)",
-      "usageRate": 86,
-      "previousRate": 71,
-      "recursiveEmployees": 7,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
+      "rate": 86,
+      "previousRate": 86,
+      "employees": 7
     },
     {
-      "id": "helen-zhou",
       "name": "Helen Zhou",
-      "firstName": "Helen",
-      "lastName": "Zhou",
-      "usageRate": 100,
-      "previousRate": 80,
-      "recursiveEmployees": 5,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "PD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth ENG Team Group",
-      "isDirectReport": true
+      "rate": 100,
+      "previousRate": 100,
+      "employees": 5
     }
-  ]
+  ],
+  "previousOrgRate": 86
 }
