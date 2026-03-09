@@ -1,12 +1,12 @@
 {
   "managerName": "Haihong Wang",
-  "orgUsageRate": 81,
+  "orgUsageRate": 85,
   "previousOrgUsageRate": 80,
   "totalEmployees": 94,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "3/6/2026, 9:36 AM MT",
-  "unidashDataAsOf": "2026-03-02",
+  "lastUpdated": "3/9/2026, 6:27 AM MT",
+  "unidashDataAsOf": "2026-03-07",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
     "toplineRate": 87,
@@ -17,20 +17,20 @@
   "pdms": [
     {
       "name": "Chuanqi Li",
-      "rate": 83,
-      "previousRate": 86,
+      "rate": 77,
+      "previousRate": 83,
       "employees": 35
     },
     {
       "name": "Ilona Parkansky",
-      "rate": 82,
+      "rate": 91,
       "previousRate": 82,
       "employees": 11
     },
     {
       "name": "Mirko Mandic",
-      "rate": 73,
-      "previousRate": 81,
+      "rate": 85,
+      "previousRate": 73,
       "employees": 26
     },
     {
@@ -41,13 +41,13 @@
     },
     {
       "name": "Iris Ozgur",
-      "rate": 70,
-      "previousRate": 90,
+      "rate": 80,
+      "previousRate": 70,
       "employees": 10
     },
     {
       "name": "Nikki Jahangiri",
-      "rate": 81,
+      "rate": 94,
       "previousRate": 81,
       "employees": 16
     },
@@ -59,16 +59,16 @@
     },
     {
       "name": "Adam Panasowich",
-      "rate": 67,
+      "rate": 83,
       "previousRate": 67,
       "employees": 6
     },
     {
       "name": "Ricardo Esteves",
-      "rate": 83,
+      "rate": 100,
       "previousRate": 83,
       "employees": 6
     }
   ],
-  "previousOrgRate": 84
+  "previousOrgRate": 81
 }
