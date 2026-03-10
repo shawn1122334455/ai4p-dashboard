@@ -1,12 +1,12 @@
 {
   "managerName": "Kay Streit",
   "orgUsageRate": 78,
-  "previousOrgRate": null,
+  "previousOrgRate": 78,
   "totalEmployees": 27,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "3/9/2026, 4:28 PM MT",
-  "unidashDataAsOf": "2026-03-07",
+  "lastUpdated": "3/10/2026, 8:40 AM MT",
+  "unidashDataAsOf": "2026-03-08",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager",
   "benchmark": {
     "toplineRate": 88,
@@ -18,46 +18,22 @@
   },
   "pdms": [
     {
-      "id": "jacklyn-brown",
       "name": "Jacklyn Brown",
-      "firstName": "Jacklyn",
-      "lastName": "Brown",
-      "recursiveEmployees": 7,
-      "usageRate": 57,
-      "previousRate": null,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "CD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
+      "rate": 57,
+      "previousRate": 57,
+      "employees": 7
     },
     {
-      "id": "jessica-nunez",
       "name": "Jessica Nunez",
-      "firstName": "Jessica",
-      "lastName": "Nunez",
-      "recursiveEmployees": 7,
-      "usageRate": 100,
-      "previousRate": null,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "CD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
+      "rate": 100,
+      "previousRate": 100,
+      "employees": 7
     },
     {
-      "id": "pip-denne",
       "name": "Pip Denne",
-      "firstName": "Pip",
-      "lastName": "Denne",
-      "recursiveEmployees": 8,
-      "usageRate": 75,
-      "previousRate": null,
-      "pillar": "Ads & Business Messaging Pillar",
-      "function": "CD",
-      "allocationArea": "ABM - Core Ads Growth",
-      "teamGroup": "Core Ads Growth XFN Team Group",
-      "isDirectReport": true
+      "rate": 75,
+      "previousRate": 75,
+      "employees": 8
     }
   ]
 }
