@@ -19,33 +19,31 @@
       "name": "Chuanqi Li",
       "rate": 83,
       "previousRate": 83,
-      "employees": 35,
-      "subReports": [
-        {
-          "name": "Bolun Yang",
-          "rate": 91,
-          "previousRate": 91,
-          "employees": 11
-        },
-        {
-          "name": "Eleanor Pachaud",
-          "rate": 75,
-          "previousRate": 75,
-          "employees": 12
-        },
-        {
-          "name": "Vivian Wang (Ads)",
-          "rate": 86,
-          "previousRate": 86,
-          "employees": 7
-        },
-        {
-          "name": "Helen Zhou",
-          "rate": 100,
-          "previousRate": 100,
-          "employees": 5
-        }
-      ]
+      "employees": 35
+    },
+    {
+      "name": "Bolun Yang",
+      "rate": 91,
+      "previousRate": 91,
+      "employees": 11
+    },
+    {
+      "name": "Eleanor Pachaud",
+      "rate": 75,
+      "previousRate": 75,
+      "employees": 12
+    },
+    {
+      "name": "Vivian Wang (Ads)",
+      "rate": 86,
+      "previousRate": 86,
+      "employees": 7
+    },
+    {
+      "name": "Helen Zhou",
+      "rate": 100,
+      "previousRate": 100,
+      "employees": 5
     },
     {
       "name": "Ilona Parkansky",
