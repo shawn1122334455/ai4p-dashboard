@@ -19,79 +19,85 @@
       "name": "Chuanqi Li",
       "rate": 83,
       "previousRate": 83,
-      "employees": 35
+      "employees": 35,
+      "subReports": [
+        {
+          "name": "Bolun Yang",
+          "rate": 91,
+          "previousRate": 91,
+          "employees": 11
+        },
+        {
+          "name": "Eleanor Pachaud",
+          "rate": 75,
+          "previousRate": 75,
+          "employees": 12
+        },
+        {
+          "name": "Vivian Wang (Ads)",
+          "rate": 86,
+          "previousRate": 86,
+          "employees": 7
+        },
+        {
+          "name": "Helen Zhou",
+          "rate": 100,
+          "previousRate": 100,
+          "employees": 5
+        }
+      ]
     },
     {
-      "name": "Bolun Yang",
-      "rate": 91,
-      "previousRate": 91,
-      "employees": 11
+      "name": "Mirko Mandic",
+      "rate": 88,
+      "previousRate": 88,
+      "employees": 26,
+      "subReports": [
+        {
+          "name": "Dan Mortimore",
+          "rate": 92,
+          "previousRate": 92,
+          "employees": 12
+        },
+        {
+          "name": "Sunnie Sang",
+          "rate": 80,
+          "previousRate": 80,
+          "employees": 5
+        },
+        {
+          "name": "Iris Ozgur",
+          "rate": 80,
+          "previousRate": 80,
+          "employees": 10
+        }
+      ]
     },
     {
-      "name": "Eleanor Pachaud",
-      "rate": 75,
-      "previousRate": 75,
-      "employees": 12
-    },
-    {
-      "name": "Vivian Wang (Ads)",
-      "rate": 86,
-      "previousRate": 86,
-      "employees": 7
-    },
-    {
-      "name": "Helen Zhou",
-      "rate": 100,
-      "previousRate": 100,
-      "employees": 5
+      "name": "Nikki Jahangiri",
+      "rate": 94,
+      "previousRate": 94,
+      "employees": 16,
+      "subReports": [
+        {
+          "name": "Adam Panasowich",
+          "rate": 83,
+          "previousRate": 83,
+          "employees": 6
+        },
+        {
+          "name": "Ricardo Esteves",
+          "rate": 100,
+          "previousRate": 100,
+          "employees": 6
+        }
+      ]
     },
     {
       "name": "Ilona Parkansky",
       "rate": 91,
       "previousRate": 91,
       "employees": 11
-    },
-    {
-      "name": "Mirko Mandic",
-      "rate": 88,
-      "previousRate": 88,
-      "employees": 26
-    },
-    {
-      "name": "Nikki Jahangiri",
-      "rate": 94,
-      "previousRate": 94,
-      "employees": 16
-    },
-    {
-      "name": "Dan Mortimore",
-      "rate": 92,
-      "previousRate": 92,
-      "employees": 12
-    },
-    {
-      "name": "Iris Ozgur",
-      "rate": 80,
-      "previousRate": 80,
-      "employees": 10
-    },
-    {
-      "name": "Sunnie Sang",
-      "rate": 80,
-      "previousRate": 80,
-      "employees": 5
-    },
-    {
-      "name": "Adam Panasowich",
-      "rate": 83,
-      "previousRate": 83,
-      "employees": 6
-    },
-    {
-      "name": "Ricardo Esteves",
-      "rate": 100,
-      "previousRate": 100,
-      "employees": 6
     }
   ],
   "previousOrgRate": 88
