@@ -5,7 +5,7 @@
   "totalEmployees": 93,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "3/20/2026, 12:23 PM MT",
+  "lastUpdated": "2026-03-16",
   "unidashDataAsOf": "2026-03-16",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
@@ -94,5 +94,93 @@
       "employees": 5
     }
   ],
-  "previousOrgRate": 90
+  "previousOrgRate": 90,
+  "toplineRate": 90.32,
+  "employeeCount": 93,
+  "managerTable": [
+    {
+      "name": "Haihong Wang",
+      "l4_7": 90.32,
+      "l4_7_pto": 95.4,
+      "employees": 93
+    },
+    {
+      "name": "Chuanqi Li",
+      "l4_7": 87.88,
+      "l4_7_pto": 93.55,
+      "employees": 33
+    },
+    {
+      "name": "Bolun Yang",
+      "l4_7": 81.82,
+      "l4_7_pto": 90.0,
+      "employees": 11
+    },
+    {
+      "name": "Eleanor Pachaud",
+      "l4_7": 100.0,
+      "l4_7_pto": 100.0,
+      "employees": 10
+    },
+    {
+      "name": "Vivian Wang (Ads)",
+      "l4_7": 100.0,
+      "l4_7_pto": 100.0,
+      "employees": 7
+    },
+    {
+      "name": "Helen Zhou",
+      "l4_7": 100.0,
+      "l4_7_pto": 100.0,
+      "employees": 5
+    },
+    {
+      "name": "Ilona Parkansky",
+      "l4_7": 91.67,
+      "l4_7_pto": 100.0,
+      "employees": 12
+    },
+    {
+      "name": "Mirko Mandic",
+      "l4_7": 96.15,
+      "l4_7_pto": 96.15,
+      "employees": 26
+    },
+    {
+      "name": "Dan Mortimore",
+      "l4_7": 91.67,
+      "l4_7_pto": 91.67,
+      "employees": 12
+    },
+    {
+      "name": "Sunnie Sang",
+      "l4_7": 80.0,
+      "l4_7_pto": 80.0,
+      "employees": 5
+    },
+    {
+      "name": "Iris Ozgur",
+      "l4_7": 100.0,
+      "l4_7_pto": 100.0,
+      "employees": 10
+    },
+    {
+      "name": "Nikki Jahangiri",
+      "l4_7": 87.5,
+      "l4_7_pto": 93.33,
+      "employees": 16
+    },
+    {
+      "name": "Adam Panasowich",
+      "l4_7": 83.33,
+      "l4_7_pto": 100.0,
+      "employees": 6
+    },
+    {
+      "name": "Ricardo Esteves",
+      "l4_7": 100.0,
+      "l4_7_pto": 100.0,
+      "employees": 6
+    }
+  ]
 }
