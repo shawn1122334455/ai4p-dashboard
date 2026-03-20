@@ -1,20 +1,20 @@
 {
   "managerName": "Kay Streit",
-  "orgUsageRate": 74,
-  "previousOrgRate": 78,
+  "orgUsageRate": 78,
+  "previousOrgRate": 74,
   "totalEmployees": 27,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "3/19/2026, 8:07 AM MT",
-  "unidashDataAsOf": "2026-03-15",
+  "lastUpdated": "3/20/2026, 10:00 AM MT",
+  "unidashDataAsOf": "2026-03-16",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager",
   "benchmark": {
-    "toplineRate": 88,
+    "toplineRate": 89,
     "previousToplineRate": 88,
     "pdFunctionRate": 85,
     "previousPdFunctionRate": 85,
     "pdFunctionFTEs": "2k",
-    "dataAsOf": "2026-03-08"
+    "dataAsOf": "2026-03-16"
   },
   "pdms": [
     {
@@ -25,14 +25,14 @@
     },
     {
       "name": "Jacklyn Brown",
-      "rate": 71,
-      "previousRate": 57,
+      "rate": 86,
+      "previousRate": 71,
       "employees": 7
     },
     {
       "name": "Jessica Nunez",
       "rate": 86,
-      "previousRate": 100,
+      "previousRate": 86,
       "employees": 7
     }
   ]

@@ -1,43 +1,43 @@
 {
   "managerName": "Haihong Wang",
-  "orgUsageRate": 87,
-  "previousOrgUsageRate": 88,
-  "totalEmployees": 92,
+  "orgUsageRate": 90,
+  "previousOrgUsageRate": 87,
+  "totalEmployees": 93,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "3/19/2026, 8:07 AM MT",
-  "unidashDataAsOf": "2026-03-15",
+  "lastUpdated": "3/20/2026, 10:00 AM MT",
+  "unidashDataAsOf": "2026-03-16",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
-    "toplineRate": 88,
-    "pdFunctionRate": 67,
+    "toplineRate": 89,
+    "pdFunctionRate": 85,
     "pdFunctionFTEs": "2k",
-    "dataAsOf": "2026-03-08"
+    "dataAsOf": "2026-03-16"
   },
   "pdms": [
     {
       "name": "Chuanqi Li",
-      "rate": 85,
-      "previousRate": 83,
+      "rate": 88,
+      "previousRate": 85,
       "employees": 33
     },
     {
       "name": "Mirko Mandic",
-      "rate": 92,
-      "previousRate": 88,
+      "rate": 96,
+      "previousRate": 92,
       "employees": 26
     },
     {
       "name": "Nikki Jahangiri",
-      "rate": 81,
-      "previousRate": 94,
+      "rate": 88,
+      "previousRate": 81,
       "employees": 16
     },
     {
       "name": "Ilona Parkansky",
-      "rate": 91,
+      "rate": 92,
       "previousRate": 91,
-      "employees": 11
+      "employees": 12
     },
     {
       "name": "Dan Mortimore",
@@ -47,25 +47,25 @@
     },
     {
       "name": "Eleanor Pachaud",
-      "rate": 80,
-      "previousRate": 75,
+      "rate": 100,
+      "previousRate": 80,
       "employees": 10
     },
     {
       "name": "Iris Ozgur",
-      "rate": 90,
-      "previousRate": 80,
+      "rate": 100,
+      "previousRate": 90,
       "employees": 10
     },
     {
       "name": "Bolun Yang",
       "rate": 82,
-      "previousRate": 91,
+      "previousRate": 82,
       "employees": 11
     },
     {
       "name": "Vivian Wang (Ads)",
-      "rate": 86,
+      "rate": 100,
       "previousRate": 86,
       "employees": 7
     },
@@ -77,8 +77,8 @@
     },
     {
       "name": "Ricardo Esteves",
-      "rate": 83,
-      "previousRate": 100,
+      "rate": 100,
+      "previousRate": 83,
       "employees": 6
     },
     {
@@ -94,5 +94,5 @@
       "employees": 5
     }
   ],
-  "previousOrgRate": 88
+  "previousOrgRate": 87
 }
