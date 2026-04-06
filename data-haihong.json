@@ -2,184 +2,184 @@
   "managerName": "Haihong Wang",
   "orgUsageRate": 79.0,
   "previousOrgUsageRate": 89.0,
-  "totalEmployees": 93,
+  "totalEmployees": 92,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "4/6/2026, 10:52 AM MT",
+  "lastUpdated": "4/6/2026, 11:41 AM MT",
   "unidashDataAsOf": "2026-04-04",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22haihongwang%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
-    "toplineRate": 89,
-    "pdFunctionRate": 85,
+    "toplineRate": 84,
+    "pdFunctionRate": 80,
     "pdFunctionFTEs": "2k",
     "dataAsOf": "2026-04-04"
   },
   "pdms": [
     {
       "name": "Chuanqi Li",
-      "rate": 88,
-      "previousRate": 85,
+      "rate": 82,
+      "previousRate": 88,
       "employees": 33
     },
     {
       "name": "Mirko Mandic",
-      "rate": 96,
-      "previousRate": 92,
+      "rate": 77,
+      "previousRate": 96,
       "employees": 26
     },
     {
       "name": "Nikki Jahangiri",
-      "rate": 88,
-      "previousRate": 81,
+      "rate": 75,
+      "previousRate": 88,
       "employees": 16
     },
     {
       "name": "Ilona Parkansky",
-      "rate": 92,
-      "previousRate": 91,
-      "employees": 12
+      "rate": 100,
+      "previousRate": 92,
+      "employees": 11
     },
     {
       "name": "Dan Mortimore",
-      "rate": 92,
+      "rate": 83,
       "previousRate": 92,
       "employees": 12
     },
     {
       "name": "Eleanor Pachaud",
-      "rate": 100,
-      "previousRate": 80,
+      "rate": 90,
+      "previousRate": 100,
       "employees": 10
     },
     {
       "name": "Iris Ozgur",
-      "rate": 100,
-      "previousRate": 90,
+      "rate": 70,
+      "previousRate": 100,
       "employees": 10
     },
     {
       "name": "Bolun Yang",
-      "rate": 82,
+      "rate": 73,
       "previousRate": 82,
       "employees": 11
     },
     {
       "name": "Vivian Wang (Ads)",
-      "rate": 100,
-      "previousRate": 86,
+      "rate": 86,
+      "previousRate": 100,
       "employees": 7
     },
     {
       "name": "Adam Panasowich",
-      "rate": 83,
+      "rate": 67,
       "previousRate": 83,
       "employees": 6
     },
     {
       "name": "Ricardo Esteves",
-      "rate": 100,
-      "previousRate": 83,
+      "rate": 67,
+      "previousRate": 100,
       "employees": 6
     },
     {
       "name": "Sunnie Sang",
-      "rate": 80,
+      "rate": 83,
       "previousRate": 80,
-      "employees": 5
+      "employees": 6
     },
     {
       "name": "Helen Zhou",
-      "rate": 100,
+      "rate": 80,
       "previousRate": 100,
       "employees": 5
     }
   ],
   "previousOrgRate": 89.0,
-  "toplineRate": 90.32,
-  "employeeCount": 93,
+  "toplineRate": 79.35,
+  "employeeCount": 92,
   "managerTable": [
     {
       "name": "Haihong Wang",
-      "l4_7": 90.32,
-      "l4_7_pto": 95.4,
-      "employees": 93
+      "l5_7": 79.35,
+      "l5_7_pto": 86.42,
+      "employees": 92
     },
     {
       "name": "Chuanqi Li",
-      "l4_7": 87.88,
-      "l4_7_pto": 93.55,
+      "l5_7": 81.82,
+      "l5_7_pto": 84.38,
       "employees": 33
     },
     {
       "name": "Bolun Yang",
-      "l4_7": 81.82,
-      "l4_7_pto": 90.0,
+      "l5_7": 72.73,
+      "l5_7_pto": 80.0,
       "employees": 11
     },
     {
       "name": "Eleanor Pachaud",
-      "l4_7": 100.0,
-      "l4_7_pto": 100.0,
+      "l5_7": 90.0,
+      "l5_7_pto": 90.0,
       "employees": 10
     },
     {
       "name": "Vivian Wang (Ads)",
-      "l4_7": 100.0,
-      "l4_7_pto": 100.0,
+      "l5_7": 85.71,
+      "l5_7_pto": 85.71,
       "employees": 7
     },
     {
       "name": "Helen Zhou",
-      "l4_7": 100.0,
-      "l4_7_pto": 100.0,
+      "l5_7": 80.0,
+      "l5_7_pto": 80.0,
       "employees": 5
     },
     {
       "name": "Ilona Parkansky",
-      "l4_7": 91.67,
-      "l4_7_pto": 100.0,
-      "employees": 12
+      "l5_7": 100.0,
+      "l5_7_pto": 100.0,
+      "employees": 11
     },
     {
       "name": "Mirko Mandic",
-      "l4_7": 96.15,
-      "l4_7_pto": 96.15,
+      "l5_7": 76.92,
+      "l5_7_pto": 81.82,
       "employees": 26
     },
     {
       "name": "Dan Mortimore",
-      "l4_7": 91.67,
-      "l4_7_pto": 91.67,
+      "l5_7": 83.33,
+      "l5_7_pto": 88.89,
       "employees": 12
     },
     {
       "name": "Sunnie Sang",
-      "l4_7": 80.0,
-      "l4_7_pto": 80.0,
-      "employees": 5
+      "l5_7": 83.33,
+      "l5_7_pto": 83.33,
+      "employees": 6
     },
     {
       "name": "Iris Ozgur",
-      "l4_7": 100.0,
-      "l4_7_pto": 100.0,
+      "l5_7": 70.0,
+      "l5_7_pto": 70.0,
       "employees": 10
     },
     {
       "name": "Nikki Jahangiri",
-      "l4_7": 87.5,
-      "l4_7_pto": 93.33,
+      "l5_7": 75.0,
+      "l5_7_pto": 92.31,
       "employees": 16
     },
     {
       "name": "Adam Panasowich",
-      "l4_7": 83.33,
-      "l4_7_pto": 100.0,
+      "l5_7": 66.67,
+      "l5_7_pto": 80.0,
       "employees": 6
     },
     {
       "name": "Ricardo Esteves",
-      "l4_7": 100.0,
-      "l4_7_pto": 100.0,
+      "l5_7": 66.67,
+      "l5_7_pto": 100.0,
       "employees": 6
     }
   ]

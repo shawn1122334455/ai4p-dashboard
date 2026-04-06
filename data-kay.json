@@ -2,16 +2,16 @@
   "managerName": "Kay Streit",
   "orgUsageRate": 61.0,
   "previousOrgRate": 64.0,
-  "totalEmployees": 27,
+  "totalEmployees": 28,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "4/6/2026, 10:52 AM MT",
+  "lastUpdated": "4/6/2026, 11:41 AM MT",
   "unidashDataAsOf": "2026-04-04",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager",
   "benchmark": {
-    "toplineRate": 89,
-    "previousToplineRate": 88,
-    "pdFunctionRate": 85,
+    "toplineRate": 84,
+    "previousToplineRate": 85,
+    "pdFunctionRate": 80,
     "previousPdFunctionRate": 85,
     "pdFunctionFTEs": "2k",
     "dataAsOf": "2026-04-04"
@@ -19,49 +19,49 @@
   "pdms": [
     {
       "name": "Pip Denne",
-      "rate": 75,
+      "rate": 88,
       "previousRate": 75,
       "employees": 8
     },
     {
       "name": "Jacklyn Brown",
-      "rate": 86,
-      "previousRate": 71,
+      "rate": 57,
+      "previousRate": 86,
       "employees": 7
     },
     {
       "name": "Jessica Nunez",
-      "rate": 86,
+      "rate": 50,
       "previousRate": 86,
-      "employees": 7
+      "employees": 8
     }
   ],
   "previousOrgUsageRate": 64.0,
-  "toplineRate": 77.78,
-  "employeeCount": 27,
+  "toplineRate": 60.71,
+  "employeeCount": 28,
   "managerTable": [
     {
       "name": "Kay Streit",
-      "l4_7": 77.78,
-      "l4_7_pto": 84.0,
-      "employees": 27
+      "l5_7": 60.71,
+      "l5_7_pto": 73.91,
+      "employees": 28
     },
     {
       "name": "Jacklyn Brown",
-      "l4_7": 85.71,
-      "l4_7_pto": 85.71,
+      "l5_7": 57.14,
+      "l5_7_pto": 80.0,
       "employees": 7
     },
     {
       "name": "Jessica Nunez",
-      "l4_7": 85.71,
-      "l4_7_pto": 85.71,
-      "employees": 7
+      "l5_7": 50.0,
+      "l5_7_pto": 50.0,
+      "employees": 8
     },
     {
       "name": "Pip Denne",
-      "l4_7": 75.0,
-      "l4_7_pto": 85.71,
+      "l5_7": 87.5,
+      "l5_7_pto": 100.0,
       "employees": 8
     }
   ]
