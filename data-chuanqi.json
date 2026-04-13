@@ -1,46 +1,42 @@
 {
   "managerName": "Chuanqi Li",
-  "orgUsageRate": 78.79,
-  "previousOrgUsageRate": 82.0,
+  "orgUsageRate": 75.76,
+  "previousOrgUsageRate": 78.79,
   "totalEmployees": 33,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM \u2013 Core Ads Growth",
-  "lastUpdated": "4/9/2026, 8:04 AM MT",
-  "unidashDataAsOf": "2026-04-05",
+  "lastUpdated": "4/13/2026, 7:35 AM MT",
+  "unidashDataAsOf": "2026-04-09",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager?dimensional_context_793502160125540=%7B%22macros%22%3A[]%2C%22limit%22%3A5%7D&events=%7B%221764239757418050%22%3A%7B%22select_manager_rollup_macro%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%2C%221764239757418050%22%3A%7B%22data%22%3A%22chuanqi%22%2C%22publisher_id%22%3A%221764239757418050%22%7D%7D%7D&var_1606330854110453period=%7B%22minutes_back%22%3A129600%2C%22time_type%22%3A%22dynamic%22%7D",
   "benchmark": {
     "toplineRate": 84,
     "pdFunctionRate": 80,
     "pdFunctionFTEs": "2k",
-    "dataAsOf": "2026-04-05"
+    "dataAsOf": "2026-04-09"
   },
   "pdms": [
     {
       "name": "Bolun Yang",
-      "rate": 73,
-      "previousRate": 73,
+      "rate": 82,
       "employees": 11
     },
     {
       "name": "Eleanor Pachaud",
-      "rate": 80,
-      "previousRate": 90,
+      "rate": 70,
       "employees": 10
     },
     {
       "name": "Vivian Wang (Ads)",
-      "rate": 71,
-      "previousRate": 86,
+      "rate": 57,
       "employees": 7
     },
     {
       "name": "Helen Zhou",
       "rate": 80,
-      "previousRate": 80,
       "employees": 5
     }
   ],
-  "previousOrgRate": 82.0,
+  "previousOrgRate": 78.79,
   "toplineRate": 81.82,
   "employeeCount": 33,
   "managerTable": [
