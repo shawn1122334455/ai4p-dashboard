@@ -19,25 +19,25 @@
       "name": "Bolun Yang",
       "rate": 81.82,
       "employees": 11,
-      "prevRate": 81.82
+      "previousRate": 81.82
     },
     {
       "name": "Eleanor Pachaud",
       "rate": 100.0,
       "employees": 10,
-      "prevRate": 80.0
+      "previousRate": 80.0
     },
     {
       "name": "Vivian Wang (Ads)",
       "rate": 100.0,
       "employees": 7,
-      "prevRate": 57.14
+      "previousRate": 57.14
     },
     {
       "name": "Helen Zhou",
       "rate": 75.0,
       "employees": 4,
-      "prevRate": 80.0
+      "previousRate": 80.0
     }
   ],
   "previousOrgRate": 75.76,

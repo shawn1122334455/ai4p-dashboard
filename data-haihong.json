@@ -19,79 +19,79 @@
       "name": "Chuanqi Li",
       "rate": 84.38,
       "employees": 32,
-      "prevRate": 75.76
+      "previousRate": 75.76
     },
     {
       "name": "Mirko Mandic",
       "rate": 96.15,
       "employees": 26,
-      "prevRate": 69.23
+      "previousRate": 69.23
     },
     {
       "name": "Nikki Jahangiri",
       "rate": 75.0,
       "employees": 16,
-      "prevRate": 68.75
+      "previousRate": 68.75
     },
     {
       "name": "Ilona Parkansky",
       "rate": 100.0,
       "employees": 11,
-      "prevRate": 100.0
+      "previousRate": 100.0
     },
     {
       "name": "Dan Mortimore",
       "rate": 91.67,
       "employees": 12,
-      "prevRate": 66.67
+      "previousRate": 66.67
     },
     {
       "name": "Eleanor Pachaud",
       "rate": 100.0,
       "employees": 10,
-      "prevRate": 80.0
+      "previousRate": 80.0
     },
     {
       "name": "Iris Ozgur",
       "rate": 100.0,
       "employees": 10,
-      "prevRate": 70.0
+      "previousRate": 70.0
     },
     {
       "name": "Bolun Yang",
       "rate": 81.82,
       "employees": 11,
-      "prevRate": 81.82
+      "previousRate": 81.82
     },
     {
       "name": "Vivian Wang (Ads)",
       "rate": 100.0,
       "employees": 7,
-      "prevRate": 57.14
+      "previousRate": 57.14
     },
     {
       "name": "Adam Panasowich",
       "rate": 33.33,
       "employees": 6,
-      "prevRate": 66.67
+      "previousRate": 66.67
     },
     {
       "name": "Ricardo Esteves",
       "rate": 100.0,
       "employees": 6,
-      "prevRate": 50.0
+      "previousRate": 50.0
     },
     {
       "name": "Sunnie Sang",
       "rate": 83.33,
       "employees": 6,
-      "prevRate": 66.67
+      "previousRate": 66.67
     },
     {
       "name": "Helen Zhou",
       "rate": 75.0,
       "employees": 4,
-      "prevRate": 80.0
+      "previousRate": 80.0
     }
   ],
   "previousOrgRate": 75.0,

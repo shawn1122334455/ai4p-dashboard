@@ -21,19 +21,19 @@
       "name": "Jacklyn Brown",
       "rate": 71.43,
       "employees": 7,
-      "prevRate": 28.57
+      "previousRate": 28.57
     },
     {
       "name": "Jessica Nunez",
       "rate": 75.0,
       "employees": 8,
-      "prevRate": 37.5
+      "previousRate": 37.5
     },
     {
       "name": "Pip Denne",
       "rate": 87.5,
       "employees": 8,
-      "prevRate": 75.0
+      "previousRate": 75.0
     }
   ],
   "previousOrgUsageRate": 46.43,
