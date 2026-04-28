@@ -1,12 +1,12 @@
 {
   "managerName": "Kay Streit",
-  "orgUsageRate": 96.15,
+  "orgUsageRate": 100.0,
   "previousOrgRate": 96.15,
   "totalEmployees": 28,
   "pillar": "Ads & Business Messaging Pillar",
   "allocationArea": "ABM - Core Ads Growth",
-  "lastUpdated": "4/27/2026, 8:42 AM MT",
-  "unidashDataAsOf": "2026-04-22",
+  "lastUpdated": "4/28/2026, 10:08 AM MT",
+  "unidashDataAsOf": "2026-04-24",
   "unidashUrl": "https://www.internalfb.com/unidash/dashboard/ai_usage_at_meta/ai4p_by_pillar/overall_one_pager",
   "benchmark": {
     "toplineRate": 84,
@@ -14,26 +14,26 @@
     "pdFunctionRate": 80,
     "previousPdFunctionRate": 85,
     "pdFunctionFTEs": "2k",
-    "dataAsOf": "2026-04-22"
+    "dataAsOf": "2026-04-24"
   },
   "pdms": [
     {
       "name": "Jacklyn Brown",
       "rate": 100.0,
-      "employees": 5,
-      "previousRate": 100.0
+      "previousRate": 100.0,
+      "employees": 5
     },
     {
       "name": "Jessica Nunez",
-      "rate": 87.5,
-      "employees": 8,
-      "previousRate": 87.5
+      "rate": 100.0,
+      "previousRate": 87.5,
+      "employees": 8
     },
     {
       "name": "Pip Denne",
       "rate": 100.0,
-      "employees": 8,
-      "previousRate": 100.0
+      "previousRate": 100.0,
+      "employees": 8
     }
   ],
   "previousOrgUsageRate": 96.15,
@@ -42,27 +42,31 @@
   "managerTable": [
     {
       "name": "Kay Streit",
-      "l5_7": 89.29,
-      "l5_7_pto": 96.15,
-      "employees": 26
+      "l5_7": 92.86,
+      "l5_7_pto": 100.0,
+      "employees": 28,
+      "employees_pto": 26
     },
     {
       "name": "Jacklyn Brown",
       "l5_7": 71.43,
       "l5_7_pto": 100.0,
-      "employees": 5
+      "employees": 7,
+      "employees_pto": 5
     },
     {
       "name": "Jessica Nunez",
-      "l5_7": 87.5,
-      "l5_7_pto": 87.5,
-      "employees": 8
+      "l5_7": 100.0,
+      "l5_7_pto": 100.0,
+      "employees": 8,
+      "employees_pto": 8
     },
     {
       "name": "Pip Denne",
       "l5_7": 100.0,
       "l5_7_pto": 100.0,
-      "employees": 8
+      "employees": 8,
+      "employees_pto": 8
     }
   ],
   "dataDate": "2026-04-19"
